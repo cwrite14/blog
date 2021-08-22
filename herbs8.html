@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="herbs.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="herbs7.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 март 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Този чай е просто задължителен за всички над 40! Мощното градинско биле лекува всичко - от грип до епилепсия!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/zdrave/tozi-chay-e-prosto-zadlzhitelen-za-vsichki-nad-40-moshchnoto-gradinsko-bile-lekuva-vsichko-ot-grip-do-epilepsiya_news498838.html">
+       <img src="content/images/PIC00273.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">01 май 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    4 вегетариански храни с високо съдържание на желязо
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/zdrave/4-vegetarianski-khrani-s-visoko-sdrzhanie-na-zhelyazo_news509102.html">
+       <img src="content/images/PIC00279.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">20 септември 2017 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Тайните на супер билката, която е най-мощният еликсир за силна имунна система
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://www.blitz.bg/zdrave/zdravoslovno/taynite-na-super-bilkata-koyato-e-nay-moshchniyat-eliksir-za-silna-imunnata-sistema_news544891.html">
+       <img src="content/images/PIC00669.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">26 октомври 2017 г. 20:32 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    14 причини, които правят розмаринът невероятно лековито растение
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://www.blitz.bg/zdrave/14-prichini-koito-pravyat-rozmarint-neveroyatno-lekovito-rastenie_news553301.html">
+       <img src="content/images/PIC00677.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">08 февруари 2018 г. 12:21 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Никога не сте чували за 9 големи ползи от лешниците!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/nikoga-ne-ste-chuvali-za-tezi-9-polzi-ot-leshnitsite">
+       <img src="content/images/PIC00700.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">26 февруари 2018 г. 17:44 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Чудотворен! 14 причини да консумираме джинджифил
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://www.blitz.bg/zdrave/chudotvoren-14-prichini-da-konsumirame-dzhindzhifil_news582005.html">
+       <img src="content/images/PIC00714.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">04 март 2018 г. 17:39 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Когато задържам течности и се чувствам супер дебела, на помощ идват тези 6 напитки
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/retsepti-na-denya/kogato-zadrzham-technosti-i-se-chuvstvam-super-debela-na-pomoshch-idvat-tezi-6-napitki?preview=@admin">
+       <img src="content/images/PIC00719.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">24 март 2018 г. 20:48 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    14 вегетариански храни, които съдържат повече желязо от месото!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/14-vegetarianski-khrani-koito-sdrzhat-poveche-zhelyazo-ot-mesoto?preview=@admin">
+       <img src="content/images/PIC00750.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">17 май 2018 г. 17:55 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    100 пъти по-ефективно от химиотерапията! Билката глухарче, която убива раковите клетки в рамките на 48 часа
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://zdrave.to/alternativna-meditsina/100-pti-po-efektivno-ot-khimioterapiyata-bilkata-koyato-ubiva-rakovite-kletki-v-ramkite-na-48-chasa?pre=view">
+       <img src="content/images/PIC00757.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">04 юни 2018 г. 18:35 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+    Ето колко много ползи ще имате, ако 2 седмици консумирате ленено семе!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://www.blitz.bg/zdrave/eto-kolko-mnogo-polzi-shche-imate-ako-2-sedmitsi-konsumirate-leneno-seme_news604730.html">
+       <img src="content/images/PIC00777.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="herbs.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="herbs7.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

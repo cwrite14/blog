@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index72.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index74.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">29 май 2019 г. 14:53 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дупльо до хралупата на големия пън                   
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05355big.jpg" data-fancybox="images" data-caption="Дупльо до хралупата на големия пън                   ">
+       <img src="content/images/CAM05355thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">30 май 2019 г. 19:04 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Новият капак на ямата                   
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05358big.jpg" data-fancybox="images" data-caption="Новият капак на ямата                   ">
+       <img src="content/images/CAM05358thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">10 юни 2019 г. 18:25 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дървата от крушата и ореха
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05375big.jpg" data-fancybox="images" data-caption="Дървата от крушата и ореха">
+       <img src="content/images/CAM05375thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05374big.jpg" data-fancybox="images" data-caption="Дървата от крушата и ореха">
+       <img src="content/images/CAM05374thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">15 юни 2019 г. 13:30 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Двата божека на мивката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05381big.jpg" data-fancybox="images" data-caption="Двата божека на мивката">
+       <img src="content/images/CAM05381thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 юни 2019 г. 18:50 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бачко наня в мивката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05384big.jpg" data-fancybox="images" data-caption="Бачко наня в мивката">
+       <img src="content/images/CAM05384thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 юни 2019 г. 18:51 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката пие вода от новата кофичка   
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05387big.jpg" data-fancybox="images" data-caption="Фенушката пие вода от новата кофичка   ">
+       <img src="content/images/CAM05387thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05388big.jpg" data-fancybox="images" data-caption="Фенушката пие вода от новата кофичка   ">
+       <img src="content/images/CAM05388thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 юни 2019 г. 19:22 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Орехът без сухия клон
+ </div>
+ <div class="gallery4" name="cat04">
+    <a class="zoom" href="content/images/CAM05390big.jpg" data-fancybox="images" data-caption="Орехът без сухия клон">
+       <img src="content/images/CAM05390thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 юни 2019 г. 19:23 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Крушата е вече отрязана
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05393big.jpg" data-fancybox="images" data-caption="Крушата е вече отрязана">
+       <img src="content/images/CAM05393thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 юни 2019 г. 19:24 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Новата бетонна пета за навеса
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05395big.jpg" data-fancybox="images" data-caption="Новата бетонна пета за навеса">
+       <img src="content/images/CAM05395thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">25 юни 2019 г. 14:11 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Новото бетонно коридорче
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05399big.jpg" data-fancybox="images" data-caption="Новото бетонно коридорче">
+       <img src="content/images/CAM05399thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05400big.jpg" data-fancybox="images" data-caption="Новото бетонно коридорче">
+       <img src="content/images/CAM05400thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 юли 2019 г. 20:35 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Зайко на възглавничката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05402big.jpg" data-fancybox="images" data-caption="Зайко на възглавничката">
+       <img src="content/images/CAM05402thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 юли 2019 г. 20:36 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Горната страна на навеса с бели камъни
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05404big.jpg" data-fancybox="images" data-caption="Горната страна на навеса с бели камъни">
+       <img src="content/images/CAM05404thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05405big.jpg" data-fancybox="images" data-caption="Горната страна на навеса с бели камъни">
+       <img src="content/images/CAM05405thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 юли 2019 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Отпред е запълнено с бели камъни
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05407big.jpg" data-fancybox="images" data-caption="Отпред е запълнено с бели камъни">
+       <img src="content/images/CAM05407thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 юли 2019 г. 20:38 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     2та леха с бели камъни
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05410big.jpg" data-fancybox="images" data-caption="2та леха с бели камъни">
+       <img src="content/images/CAM05410thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05411big.jpg" data-fancybox="images" data-caption="2та леха с бели камъни">
+       <img src="content/images/CAM05411thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">06 юли 2019 г. 20:10 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Камъните откъм водомера
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05412big.jpg" data-fancybox="images" data-caption="Камъните откъм водомера">
+       <img src="content/images/CAM05412thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">06 юли 2019 г. 20:11 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Камъните в средата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05414big.jpg" data-fancybox="images" data-caption="Камъните в средата">
+       <img src="content/images/CAM05414thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">11 юли 2019 г. 21:12 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко наня на ризата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05418big.jpg" data-fancybox="images" data-caption="Бушко наня на ризата">
+       <img src="content/images/CAM05418thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">11 юли 2019 г. 21:13 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето наня на възглавницата в 1вата стая   
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05422big.jpg" data-fancybox="images" data-caption="Патето наня на възглавницата в 1вата стая   ">
+       <img src="content/images/CAM05422thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">13 юли 2019 г. 15:29 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дупльото на котешки час
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05439big.jpg" data-fancybox="images" data-caption="Дупльото на котешки час">
+       <img src="content/images/CAM05439thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">13 юли 2019 г. 15:30 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Пухчо на котешки час
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM05440big.jpg" data-fancybox="images" data-caption="Пухчо на котешки час">
+       <img src="content/images/CAM05440thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index72.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index74.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

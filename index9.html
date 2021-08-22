@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index8.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index10.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">22 юли 2016 г. 15:23 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Комарът, сеещ Зика, засечен по морето и край Марица
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/news/article/425854">
+       <img src="content/images/PIC00351.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">22 юли 2016 г. 15:26 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Топ 10 на най-добрите природни антибиотици
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/news/article/430467">
+       <img src="content/images/PIC00352.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">24 юли 2016 г. 15:09 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Медикаментът диклофенак увеличава риска от инфаркт
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/article/42570">
+       <img src="content/images/PIC00353.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">24 юли 2016 г. 15:23 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     За края на света
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/430917">
+       <img src="content/images/PIC00354.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">24 юли 2016 г. 22:47 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Светлината нощем вреди
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/news/article/431097">
+       <img src="content/images/PIC00358.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">25 юли 2016 г. 13:10 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Опасен вирус
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/news/article/431195">
+       <img src="content/images/PIC00359.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 юли 2016 г. 23:46 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Тученицата гарантира дълголетие
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/2895-tuchenicata-garantira-dylgoletie">
+       <img src="content/images/PIC00022.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 юли 2016 г. 23:51 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Плевел, билка или зеленчук – непознатата тученица
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.edna.bg/zdravoslovno/bio/plevel-bilka-ili-zelenchuk-nepoznatata-tuchenica-4633156">
+       <img src="content/images/PIC00023.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 юли 2016 г. 23:54 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Тученицата лекува 101 болести
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/news/article/422959">
+       <img src="content/images/PIC00361.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 юли 2016 г. 23:57 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Тученицата - плевел вместо хапче
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/article/36554">
+       <img src="content/images/PIC00362.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat11_L>"></div>
+ <div class="s_title"  name="cat11_A">26 юли 2016 г. 00:05 ч.</div>
+ <div class="s_title2" name="cat11_B">Категория &quot;Климат&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat11_T">
+     Кувейт - 54 градуса жега
+ </div>
+ <div class="gallery3" name="cat11_1">
+    <a href="https://www.actualno.com/asia/v-kuvejt-izmeriha-naj-visokata-temperatura-na-planetata-news_552558.html">
+       <img src="content/images/PIC00021.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">26 юли 2016 г. 14:44 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Гигантска стъпка на динозавър смая палеонтолози
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/431502">
+       <img src="content/images/PIC00364.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat13_L>"></div>
+ <div class="s_title"  name="cat13_A">26 юли 2016 г. 14:52 ч.</div>
+ <div class="s_title2" name="cat13_B">Категория &quot;Забележителности&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat13_T">
+     Водопадите Игуасу - едно от чудесата на нашия свят
+ </div>
+ <div class="gallery3" name="cat13_1">
+    <a href="http://www.blitz.bg/news/article/431480">
+       <img src="content/images/PIC00365.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">26 юли 2016 г. 14:56 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Това е зарзаватът, който има повече Витамин C от цитрусите
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/news/article/431455">
+       <img src="content/images/PIC00366.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat02_L>"></div>
+ <div class="s_title"  name="cat02_A">26 юли 2016 г. 14:58 ч.</div>
+ <div class="s_title2" name="cat02_B">Категория &quot;Котета&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat02_T">
+     Най-мързеливото коте
+ </div>
+ <div class="gallery3" name="cat02_1">
+    <a href="http://www.blitz.bg/news/article/431474">
+       <img src="content/images/PIC00367.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">26 юли 2016 г. 15:03 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Лекарствени гъби - против рак
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/article/45462">
+       <img src="content/images/PIC00368.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">26 юли 2016 г. 15:08 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Чудовищна магнитна буря днес
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/news/article/431445">
+       <img src="content/images/PIC00370.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">26 юли 2016 г. 22:15 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Харисън Форд на 71
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/news/article/431611">
+       <img src="content/images/PIC00371.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">26 юли 2016 г. 22:28 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Простатата - най-уязвимият орган на мъжа над 50
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/article/45455">
+       <img src="content/images/PIC00372.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">28 юли 2016 г. 11:50 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Пет здравословни причини да ядем повече яйца
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/news/article/432074">
+       <img src="content/images/PIC00374.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index8.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index10.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

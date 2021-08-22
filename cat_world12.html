@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world11.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world13.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">12 май 2017 г. 21:18 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването под кайсиите
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02764big.jpg" data-fancybox="images" data-caption="Разчистването под кайсиите">
+       <img src="content/images/CAM02764thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02779big.jpg" data-fancybox="images" data-caption="Разчистването под кайсиите">
+       <img src="content/images/CAM02779thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">13 май 2017 г. 21:07 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването отвън до камъните
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02783big.jpg" data-fancybox="images" data-caption="Разчистването отвън до камъните">
+       <img src="content/images/CAM02783thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02784big.jpg" data-fancybox="images" data-caption="Разчистването отвън до камъните">
+       <img src="content/images/CAM02784thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02786big.jpg" data-fancybox="images" data-caption="Разчистването отвън до камъните">
+       <img src="content/images/CAM02786thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">16 май 2017 г. 21:17 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването около къщата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02791big.jpg" data-fancybox="images" data-caption="Разчистването около къщата">
+       <img src="content/images/CAM02791thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02792big.jpg" data-fancybox="images" data-caption="Разчистването около къщата">
+       <img src="content/images/CAM02792thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02793big.jpg" data-fancybox="images" data-caption="Разчистването около къщата">
+       <img src="content/images/CAM02793thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02795big.jpg" data-fancybox="images" data-caption="Разчистването около къщата">
+       <img src="content/images/CAM02795thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02797big.jpg" data-fancybox="images" data-caption="Разчистването около къщата">
+       <img src="content/images/CAM02797thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">19 май 2017 г. 21:12 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     По-нататъшно разчистване в нивата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02808big.jpg" data-fancybox="images" data-caption="По-нататъшно разчистване в нивата">
+       <img src="content/images/CAM02808thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02809big.jpg" data-fancybox="images" data-caption="По-нататъшно разчистване в нивата">
+       <img src="content/images/CAM02809thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02816big.jpg" data-fancybox="images" data-caption="По-нататъшно разчистване в нивата">
+       <img src="content/images/CAM02816thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02817big.jpg" data-fancybox="images" data-caption="По-нататъшно разчистване в нивата">
+       <img src="content/images/CAM02817thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2017 г. 18:41 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето при котешката трева
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02828big.jpg" data-fancybox="images" data-caption="Патето при котешката трева">
+       <img src="content/images/CAM02828thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">22 май 2017 г. 20:22 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Невен в градинката до климатика
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02830big.jpg" data-fancybox="images" data-caption="Невен в градинката до климатика">
+       <img src="content/images/CAM02830thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">22 май 2017 г. 21:04 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Невен в градинката до шахтата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02833big.jpg" data-fancybox="images" data-caption="Невен в градинката до шахтата">
+       <img src="content/images/CAM02833thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">22 май 2017 г. 20:31 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването на нивата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02835big.jpg" data-fancybox="images" data-caption="Разчистването на нивата">
+       <img src="content/images/CAM02835thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02837big.jpg" data-fancybox="images" data-caption="Разчистването на нивата">
+       <img src="content/images/CAM02837thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">22 май 2017 г. 20:31 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването от задната страна
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02840big.jpg" data-fancybox="images" data-caption="Разчистването от задната страна">
+       <img src="content/images/CAM02840thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">27 май 2017 г. 13:58 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Зайко на пънчето
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02847big.jpg" data-fancybox="images" data-caption="Зайко на пънчето">
+       <img src="content/images/CAM02847thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">27 май 2017 г. 13:59 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Морякът сред зеленината на тромпетите
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02850big.jpg" data-fancybox="images" data-caption="Морякът сред зеленината на тромпетите">
+       <img src="content/images/CAM02850thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">27 май 2017 г. 20:31 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката на леглото в голямата стая
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02854big.jpg" data-fancybox="images" data-caption="Фенушката на леглото в голямата стая">
+       <img src="content/images/CAM02854thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">27 май 2017 г. 20:32 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето на малкото пънче в градинката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02855big.jpg" data-fancybox="images" data-caption="Патето на малкото пънче в градинката">
+       <img src="content/images/CAM02855thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 май 2017 г. 13:59 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Цъфналият храст до пощенските кутии
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02856big.jpg" data-fancybox="images" data-caption="Цъфналият храст до пощенските кутии">
+       <img src="content/images/CAM02856thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 май 2017 г. 14:00 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Източната страна на къщата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02858big.jpg" data-fancybox="images" data-caption="Източната страна на къщата">
+       <img src="content/images/CAM02858thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">30 май 2017 г. 13:08 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Чернушана сред зеленината
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02864big.jpg" data-fancybox="images" data-caption="Чернушана сред зеленината">
+       <img src="content/images/CAM02864thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">30 май 2017 г. 13:08 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Разчистването на камъчките
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02866big.jpg" data-fancybox="images" data-caption="Разчистването на камъчките">
+       <img src="content/images/CAM02866thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02867big.jpg" data-fancybox="images" data-caption="Разчистването на камъчките">
+       <img src="content/images/CAM02867thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">01 юни 2017 г. 13:02 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дупльото при котешката трева
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02871big.jpg" data-fancybox="images" data-caption="Дупльото при котешката трева">
+       <img src="content/images/CAM02871thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">03 юни 2017 г. 13:00 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дупльото на пънче
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02882big.jpg" data-fancybox="images" data-caption="Дупльото на пънче">
+       <img src="content/images/CAM02882thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">04 юни 2017 г. 19:33 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Градинката без туята
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02896big.jpg" data-fancybox="images" data-caption="Градинката без туята">
+       <img src="content/images/CAM02896thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02895big.jpg" data-fancybox="images" data-caption="Градинката без туята">
+       <img src="content/images/CAM02895thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02899big.jpg" data-fancybox="images" data-caption="Градинката без туята">
+       <img src="content/images/CAM02899thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world11.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world13.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="cat_world.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

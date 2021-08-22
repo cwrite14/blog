@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index26.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index28.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">09 ноември 2016 г. 20:58 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Пет неща за човешкото тяло, които (още) нямат обяснение
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.vesti.bg/lyubopitno/lyubopitno/pet-fakta-za-tialoto-koito-niamat-obiasnenie-video-6051617">
+       <img src="content/images/PIC00087.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">09 ноември 2016 г. 21:01 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Златната усойница, чиято отрова топи човешка плът
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.vesti.bg/razvlechenia/lyubopitno/zlatnata-usojnica-chiiato-otrova-topi-choveshka-plyt-6016258">
+       <img src="content/images/PIC00088.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">09 ноември 2016 г. 21:05 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Много ли са отровните змии у нас
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.vesti.bg/bulgaria/mnogo-li-sa-otrovnite-zmii-u-nas-3843831">
+       <img src="content/images/PIC00089.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">11 ноември 2016 г. 20:28 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дворът след разчистването на вала с треви
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02399big.jpg" data-fancybox="images" data-caption="Дворът след разчистването на вала с треви">
+       <img src="content/images/CAM02399thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">11 ноември 2016 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бачко и зайко на синята фланела
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02384big.jpg" data-fancybox="images" data-caption="Бачко и зайко на синята фланела">
+       <img src="content/images/CAM02384thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02388big.jpg" data-fancybox="images" data-caption="Бачко и зайко на синята фланела">
+       <img src="content/images/CAM02388thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">11 ноември 2016 г. 20:32 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката и бачко на големия пън
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02394big.jpg" data-fancybox="images" data-caption="Фенушката и бачко на големия пън">
+       <img src="content/images/CAM02394thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02398big.jpg" data-fancybox="images" data-caption="Фенушката и бачко на големия пън">
+       <img src="content/images/CAM02398thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">11 ноември 2016 г. 20:38 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Загадката на безследно изчезналите
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.vesti.bg/sviat/zagadkata-na-bezsledno-izcheznalite-4451271">
+       <img src="content/images/PIC00090.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">12 ноември 2016 г. 20:24 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Експерти бият тревога: Магнитни бури ни морят 14 дни! Eто кои хора са най-застрашени
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/evrika/eksperti-biyat-trevoga-magnitni-buri-ni-moryat-14-dni-eto-koi-khora-sa-nay-zastrasheni_news462318.html">
+       <img src="content/images/PIC00573.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">15 ноември 2016 г. 20:31 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     10 изненадваща факта за нашия мозък
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/evrika/10-iznenadvashcha-fakta-za-nashiya-mozk_news463074.html">
+       <img src="content/images/PIC00575.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 ноември 2016 г. 20:06 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Дворът след изгарянето на клоните - остава само една купа трева
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02410big.jpg" data-fancybox="images" data-caption="Дворът след изгарянето на клоните - остава само една купа трева">
+       <img src="content/images/CAM02410thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">17 ноември 2016 г. 20:26 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Прасетата биват оптимисти и песимисти
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/prasetata-bivat-optimisti-i-pesimisti_news463781.html">
+       <img src="content/images/PIC00577.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">18 ноември 2016 г. 20:36 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учени разкриват тайната на безсмъртието! Възможно ли е мечтата на милиони да се сбъдне?
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/svyat/ucheni-razkrivat-taynata-na-bezsmrtieto-vzmozhno-li-e-mechtata-na-milioni-da-se-sbdne-video_news463499.html">
+       <img src="content/images/PIC00578.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">18 ноември 2016 г. 20:38 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     6 неща, които не трябва да правите сутрин
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/svyat/6-neshcha-koito-ne-tryabva-da-pravite-sutrin_news463448.html">
+       <img src="content/images/PIC00579.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">18 ноември 2016 г. 20:40 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Тези 9 типа болка са директно свързани с емоционалното ни състояние
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/obshtestvo/tezi-9-tipa-bolka-sa-direktno-svrzani-s-emotsionalnoto-ni-sstoyanie_news463434.html">
+       <img src="content/images/PIC00580.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">18 ноември 2016 г. 20:47 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Вижте възможните приложения на английската сол!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.lekar.bg/2015/06/11/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B0-%D1%81%D0%BE%D0%BB/">
+       <img src="content/images/PIC00091.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">18 ноември 2016 г. 20:49 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Какво лекува английската сол
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://medpedia.framar.bg/%D0%B0%D0%BB%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0/%D0%BA%D0%B0%D0%BA%D0%B2%D0%BE-%D0%BB%D0%B5%D0%BA%D1%83%D0%B2%D0%B0-%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%82%D0%B0-%D1%81%D0%BE%D0%BB">
+       <img src="content/images/PIC00092.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">19 ноември 2016 г. 20:09 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     СЗО: Ами ако антибиотиците спрат да действат?
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.vesti.bg/sviat/szo-ami-ako-antibioticite-sprat-da-dejstvat-6012546">
+       <img src="content/images/PIC00093.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">19 ноември 2016 г. 20:12 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Сензационни находки в Египет може да променят цялата световна история
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/evrika/senzatsionni-nakhodki-v-egipet-mozhe-da-promenyat-tsyalata-svetovna-istoriya-snimki_news464221.html">
+       <img src="content/images/PIC00581.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">19 ноември 2016 г. 20:18 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     NI състави топ 5 на най-мощните руски въоръжения на бъдещето
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/ni-sstavi-top-5-na-nay-moshchnite-ruski-vorzheniya-na-bdeshcheto_news443854.html">
+       <img src="content/images/PIC00583.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">19 ноември 2016 г. 20:20 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Путин и висши военни взеха решения за производството на най-страшните оръжия на 21 век
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/putin-i-visshi-voenni-vzekha-resheniya-za-proizvodstvoto-na-nay-strashnite-orzhiya-na-21-vek-video_news464318.html">
+       <img src="content/images/PIC00584.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index26.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index28.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

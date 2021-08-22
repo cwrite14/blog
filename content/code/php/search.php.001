@@ -1,0 +1,34 @@
+<?php
+
+//print("Hello World");
+
+$log_file = 'log.txt';
+$handle = fopen($log_file, "a");
+
+$search_key = $_POST["search_key"];
+$category = $_POST["category"];
+
+log_msg("search_key=$search_key\n");
+log_msg("category=$category\n");
+
+
+success_js(array("search" => "ok"));
+
+
+
+function log_msg($message)
+   { global $handle;
+
+     fwrite($handle, $message);
+   }
+function success_js($result)
+   {
+     $ar = array
+        ( "success" => "true",
+          "result" => $result, 
+        );
+     $result = json_encode($ar);
+     print "$result";
+   }
+
+?>

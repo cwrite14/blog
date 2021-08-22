@@ -1,0 +1,133 @@
+//
+// изпраща формата за поща на Perl скрипт
+// посредством синхронна ajax заявка
+//
+$('form#form_search').submit(function()
+   {
+    //alert("search.js");
+    //alert(document.location.host);
+
+    //$('#form_gif').show();
+
+    //document.getElementById('form_gif').style.display = 'block';;
+
+    var script_url = $(this).attr('action');
+
+    //var proxy = 'https://cors-anywhere.herokuapp.com/';
+    var cors_url = '';
+    //if ( document.location.host != 'localhost' )
+       { //cors_url = proxy + 'https://rivesta.herokuapp.com/';
+         cors_url = 'https://rivesta.herokuapp.com/';
+         //cors_url = proxy + 'localhost/';
+       }
+    script_url =  cors_url + script_url;
+    
+    //script_url = 'http://jsonp.guffa.com/Proxy.ashx?url=';
+    //script_url += 'https:%2f%2frivesta.herokuapp.com%2f';
+    //script_url += 'contents%2fdesign%2fphp%2fsearch.php';
+
+    //script_url = 'https://jsonp.afeld.me/?url=' + script_url;
+    //script_url = 'https://jsonp.afeld.me/?callback=?&url=' + script_url;
+    alert(script_url);
+
+    var data_all = $(this).serialize();
+    //alert(data_all);
+
+    var type_rq = 'POST';
+
+    var response = $.ajax({
+             //url      : $(this).attr('action'),
+             url      : script_url,
+             type     : type_rq,
+             cache    : false,
+             //data     : 'origin=https://rivesta.herokuapp.com&' + $(this).serializeArray(),
+             //data     : 'origi=&' + $(this).serializeArray(),
+             data     :  data_all,
+             //contentType: "application/x-www-form-urlencoded;charset=UTF-8", //default
+             //contentType: "text/plain; charset=UTF-8",
+             //dataType : "text/plain; charset=UTF-8",
+             //dataType : "text/plain",
+             //
+             //data     : encodeURIComponent($(this).serializeArray()),
+             //dataType : 'script',  //това пречи на json отговора
+             //headers: {  'Access-Control-Allow-Origin': '*' },
+             //header("Access-Control-Allow-Headers", "x-requested-with, x-requested-by"),
+             //headers: {  'Access-Control-Allow-Headers': 'x-requested-with' },
+             //headers: {'X-Requested-With': 'XMLHttpRequest'},
+             //headers: {'Origin': 'rivesta.herokuapp.com'},
+
+             //crossDomain: false,
+             crossDomain: true,
+             //dataType: 'jsonp',
+             //{jsonp: false},
+             //jsonp: false,
+             //jsonp: false,
+
+
+             async    : true,
+             success  : function(data)
+                {
+                  //alert("ajax success");
+
+                  //alert(data);
+                  console.log(data);
+
+                  var data_j = JSON.parse(data);
+                  //alert(data_j.success);
+
+                  //location.href = 'search.html';
+                  //window.location.replace('search.html');
+
+                  if ( data_j.success == 'true' )
+                     { if ( data_j.result.search == 'ok' )
+                          { window.location = cors_url + 'search.html';
+                          }
+                       if ( data_j.result.search == 'none' )
+                          { alert("Няма намерени.");
+                          }
+                     }
+                  //setTimeout(function(){location.reload();}, 5000);
+                  //alert("ok");
+                },
+             error    : function(xhr, status, error)
+                { // GitHub връща грешка, но Heroku изпълнява скрипта - 200
+                  alert(document.location.host + ": ajax error");
+                  //window.location = cors_url + 'search.html';
+                  //alert(xhr.responseText);
+
+                  console.log("readyState: " + xhr.readyState);
+                  console.log("responseText: "+ xhr.responseText);
+                  console.log("status: " + xhr.status);
+                  console.log("text status: " + textStatus);
+                  console.log("error: " + err);
+                },
+             complete : function(data)
+                {
+                  // object Object
+                  //alert("!" + data + "!");
+
+                  // това дава резултат
+                  //var data_str = JSON.stringify(data);
+                  //alert("!" + data_str + "!");
+
+                  //var data_j = JSON.parse(data);
+                  //alert(data_j.responseText.success);
+
+                  //setTimeout(function()
+                  //   { window.location.reload();
+                  //   }, 100);    
+                },
+     }).responseText;
+    //alert(response);
+
+    //$('#form_gif').hide();
+
+    //document.getElementById('form_gif').style.display = 'none';;
+
+    //if ( /success/.test(response) )
+    //   { $('#form_search')[0].reset();
+    //     //document.getElementById('form_mail').reset();
+    //   }
+
+    return false;
+   });

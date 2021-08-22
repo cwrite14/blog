@@ -1,0 +1,94 @@
+#
+#Deny from all
+#Header add Access-Control-Allow-Origin "*"
+#
+#========================================
+# засега това е най-добрата защита  
+#========================================
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteBase /
+   RewriteCond %{HTTP_USER_AGENT} !(^Mozilla|^Opera)
+   RewriteRule .* - [F,L]
+
+   #RewriteCond %{REQUEST_FILENAME} !-f
+   #RewriteRule (.*) $1 [R=404,L]
+
+   #RewriteCond %{REQUEST_FILENAME} hosted
+   #RewriteRule (.*) $1 [R=404,L]
+   #RewriteCond %{REQUEST_FILENAME} skype.html
+   #RewriteCond %{HTTP_HOST} ^web-rivesta.rhcloud.com$
+   #RewriteRule skype.html http://web-rivesta.rhcloud.com/kselo.html [R=301,L]
+   #RedirectMatch 301 ^/skype.html$ /kselo.html
+
+   # -- GitHub - работи, показва GitHub url, преминава към https
+   #RewriteRule (.*) http://im-rstar.github.io/$1
+
+   # -- GitHub - mod_proxy, mod_proxy_http - зарежда, но сменя адреса --
+   #RewriteRule (.*) http://im-rstar.github.io/$1 [P]
+
+   # -- Heroku - зарежда, без да сменя адреса ! --
+   # -- url е https - но не бива да се задава с https - тогава дава грешка
+   ##RewriteCond %{HTTPS} !=on
+   #RewriteCond %{HTTP_HOST} ^im.rivesta.tk$
+   #RewriteCond %{HTTP_HOST}  !localhost [NC]
+   #RewriteCond %{HTTP_HOST}  !herokuapp
+   #RewriteRule ^/(.*) http://rivesta.herokuapp.com/$1 [P]
+   #RewriteCond %{HTTP_HOST}  ^im.rivesta.tk$
+   #RewriteRule (.*) http://rivesta.herokuapp.com/$1 [P]
+
+   # -- Heroku - loads, shows heroku address --
+   #RewriteRule ^(.*)$ https://rivesta.herokuapp.com/$1 [R=301,L]
+
+   #RewriteCond %{HTTP_HOST} !^im\.rivesta\.tk
+   #RewriteRule (.*)         https://im.rivesta.tk/$1 [L,R]
+
+</ifModule>
+
+#=============================
+# .htaccess за redirect    
+#=============================
+#<IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteBase /
+#
+#   RewriteCond %{HTTP_USER_AGENT} !(^Mozilla|^Opera)
+#   RewriteRule .* - [F,L]
+#
+#   RewriteRule (.*) http://web-rivesta.rhcloud.com/hosted/dino/$1 [R=301,L]
+#</ifModule>
+
+#=============================
+# Директории
+#=============================
+Options All -Indexes
+DirectoryIndex index.html
+
+#=========================================
+# Пълна защита за .htaccess and .htpasswd 
+#=========================================
+<FilesMatch "^\.ht">
+   Order allow,deny
+   Deny from all
+   Satisfy All
+</FilesMatch>
+
+#=========================================
+# Пълна защита за .pl скриптовете
+#=========================================
+<FilesMatch "\.pl$">
+   Deny from all
+</FilesMatch>
+<Files "start.pl">
+   Allow from all
+</Files>
+
+#=============================
+# Пълна защита за други файлове
+#=============================
+<FilesMatch "log\.txt$">
+   Deny from all
+</FilesMatch>
+#<FilesMatch "battery13\.html$">
+#   Deny from all
+#</FilesMatch>

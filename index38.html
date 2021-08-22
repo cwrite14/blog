@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index37.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index39.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">09 февруари 2017 г. 21:29 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Новото лазерно оръжие на САЩ! От какво да се страхуват Русия и светът
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/goreshtite-novini/novoto-lazerno-orzhie-na-sashch-ot-kakvo-da-se-strakhuvat-rusiya-i-svett_news486776.html">
+       <img src="content/images/PIC00200.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 19:45 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Къщичка с кладенец, 1:4, размери: 88 х 53 см, конци: DMC, цена: 150 лв, фирма: Егоблени
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://www.gobleni-magazinbg.com/product/682/goblen-kashtichka-s-kladenets-1-4.html">
+       <img src="content/images/PIC00201.png" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 19:52 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Фар край морето, 1:1, размери: 42 х 26 см, конци: DMC, цена: 49 лв, фирма: Егоблени
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://www.gobleni-magazinbg.com/product/287/goblen-far-kray-moreto.html">
+       <img src="content/images/PIC00202.png" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:05 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Натюрморт с ананас, 1:4, размери: 44 х 64 см, конци: DMC, цена: 99 лв, фирма: Ади-Таи
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://dmcbg.com/%D0%9D%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82-%D1%81-%D0%B0%D0%BD%D0%B0%D0%BD%D0%B0%D1%81-p112">
+       <img src="content/images/PIC00203.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:10 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Соната на свещи, 1:1, размери: 48 х 39 см, конци: DMC, цена: 79 лв, фирма: Вачеви
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=83&product_id=783">
+       <img src="content/images/PIC00204.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:13 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Далии, по картина на Реноар, 1:1, размери: 30 х 37 см, конци: DMC, цена: , фирма: Кадифе Крафт
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblena.blogspot.bg/2015/04/blog-post_99.html">
+       <img src="content/images/PIC00205.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:20 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Ранна пролет, 1:4, размери: 48 х 62 см, цена: 99.5 лв - фирма: Румяна, Пейзаж с брези, цена 120 лв - фирма Румина
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-554--%D0%A0%D0%B0%D0%BD%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%BB%D0%B5%D1%82">
+       <img src="content/images/PIC00206.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:24 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Есенни цветя, по картина на Реноар, 1:4, размери: 53 х 66 см, конци: DMC, цена: 102 лв, фирма: Вачеви
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=83&product_id=543">
+       <img src="content/images/PIC00207.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 20:59 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Люляци, 1:4, размери: 73 х 53 см, конци: Puppets, цена: 34.30 лв, фирма: Заря-21
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://zaria-21.com/index.php?p=23&id=74">
+       <img src="content/images/PIC00209.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Усещане за лято, 1:4, размери: 27 х 36 см, цена: 26 лв, фирма: Gobleni-RZ
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://gobleni-rz.com/bg/%D0%93%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B8/%D0%A6%D0%B2%D0%B5%D1%82%D1%8F-%D0%B8-%D0%BD%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82%D0%B8/%D0%A3%D1%81%D0%B5%D1%89%D0%B0%D0%BD%D0%B5-%D0%B7%D0%B0-%D0%BB%D1%8F%D1%82%D0%BE.html">
+       <img src="content/images/PIC00210.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:07 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Усещане за пролет, 1:4, размери: 27 х 36 см, цена: 26 лв, фирма: Gobleni-RZ
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://gobleni-rz.com/bg/%D0%93%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B8/%D0%A6%D0%B2%D0%B5%D1%82%D1%8F-%D0%B8-%D0%BD%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82%D0%B8/%D0%A3%D1%81%D0%B5%D1%89%D0%B0%D0%BD%D0%B5-%D0%B7%D0%B0-%D0%BF%D1%80%D0%BE%D0%BB%D0%B5%D1%82.html">
+       <img src="content/images/PIC00211.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:19 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Люляци, 1:4, размери: 73 х 53 см, цена: 45 лв, фирма: Gobleni-RZ
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://gobleni-rz.com/bg/%D0%93%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B8/%D0%A6%D0%B2%D0%B5%D1%82%D1%8F-%D0%B8-%D0%BD%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82%D0%B8/%D0%9B%D1%8E%D0%BB%D1%8F%D1%86%D0%B8.html">
+       <img src="content/images/PIC00212.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:23 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Композиция със слънчогледи, 1:4, размери: 18 х 41 см, цена: 18 лв, фирма: Gobleni-RZ
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://gobleni-rz.com/bg/%D0%93%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B8/%D0%A6%D0%B2%D0%B5%D1%82%D1%8F-%D0%B8-%D0%BD%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82%D0%B8/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F-%D1%81%D1%8A%D1%81-%D1%81%D0%BB%D1%8A%D0%BD%D1%87%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4%D0%B8.html">
+       <img src="content/images/PIC00213.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:49 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Планински пейзаж, 1:4, размери: 66 х 53 см, цена: , фирма: Герика
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://www.gerikadimensions.com/gerika3/gobleni-gerika2.htm">
+       <img src="content/images/PIC00214.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 21:54 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Пътечка, 1:4, размери: 49 х 36 см, цена: 69.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-595">
+       <img src="content/images/PIC00215.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 23:18 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Лятно съзвучие, 1:4, размери: 45 х 37 см, цена: 62.50 лв, фирма Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-253--%D0%9B%D1%8F%D1%82%D0%BD%D0%BE-%D1%81%D1%8A%D0%B7%D0%B2%D1%83%D1%87%D0%B8%D0%B5">
+       <img src="content/images/PIC00216.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">12 февруари 2017 г. 23:22 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Лалета, 1:4, размери: 36 х 47 см, цена: 62.50 лв, фирма Румяна
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-375--%D0%9B%D0%B0%D0%BB%D0%B5%D1%82%D0%B0">
+       <img src="content/images/PIC00217.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">13 февруари 2017 г. 12:55 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Натюрморт с цветя, 1:4, размери: 51 х 67 см, цена: 109.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-387--%D0%9D%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82-%D1%81-%D1%86%D0%B2%D0%B5%D1%82%D1%8F">
+       <img src="content/images/PIC00218.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">13 февруари 2017 г. 12:57 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Натюрморт с цветя, 1:4, размери: 44 х 64 см, цена: 99.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-252--%D0%9D%D0%B0%D1%82%D1%8E%D1%80%D0%BC%D0%BE%D1%80%D1%82-%D1%81-%D1%86%D0%B2%D0%B5%D1%82%D1%8F">
+       <img src="content/images/PIC00219.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">13 февруари 2017 г. 13:01 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Рози и люляк, 1:4, размери: 70 х 52 см, цена: 109.50 см, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-388--%D0%A0%D0%BE%D0%B7%D0%B8-%D0%B8-%D0%BB%D1%8E%D0%BB%D1%8F%D0%BA">
+       <img src="content/images/PIC00220.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index37.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index39.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

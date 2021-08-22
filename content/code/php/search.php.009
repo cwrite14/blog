@@ -1,0 +1,227 @@
+<?php
+
+$log_file = 'log.txt';
+$handle = fopen($log_file, "a");
+
+$no_result_flag = 0;
+if ( array_key_exists('search_key', $_POST) )
+   { $search_key = $_POST["search_key"];
+     if ( strlen($search_key) == 0 )
+        { $no_result_flag = 1;
+        }
+   }
+else
+   { fail();
+   }
+if ( $no_result_flag )
+   { log_msg("search_key=||\n");
+     success_js(array('search' => 'none'));
+   }
+
+if ( array_key_exists('category', $_POST) )
+   { $category = $_POST["category"];
+   }
+else
+   { fail();
+   }
+
+log_msg("search_key=|$search_key|\n");
+log_msg("category=$category\n");
+
+//============== обработка ========================
+$empty_link = 'javascript:';
+
+$page_records = 20;
+$index_prev;
+$index_next;
+$page_prev;
+$page_next;
+
+$page_dir = '../../../';
+
+$hash2 = array
+   ( '00' => 'Всичко',
+     '09' => 'Археология',
+     '01' => 'Билки',
+     '14' => 'Гоблени',
+     '13' => 'Забележителности',
+     '06' => 'Здраве',
+     '11' => 'Климат',
+     '15' => 'Красота',
+     '08' => 'Космос',
+     '02' => 'Котета',
+     '04' => 'Котешки свят',
+     '17' => 'Лекарства',
+     '05' => 'Оръжия',
+     '07' => 'Разни',
+     '10' => 'Религия',
+   );
+ 
+$out_file;
+
+$db_txt = get_db_records();
+log_msg("database has " . sizeof($db_txt) . " lines\n");
+
+
+// Намиране на резултати
+$ar4 = array();
+
+for($i = 1; $i <= sizeof($db_txt); $i++)
+   { $line = $db_txt[$i-1];
+
+     if ( strcmp(substr($line,0,1), '#') == 0 )
+        { continue;
+        }
+
+     $db = explode("|", $line);
+     //log_msg("i=$i parts=" . sizeof($db) . "\n");
+     sizeof($db) == 5 || fail("line=$i parts=" . sizeof($db));
+
+     $text = $db[5-1];
+     //if ( preg_match("/$search_key/i", $text) )
+     $pos = stripos($text, $search_key);
+     if ( $pos !== false )
+        { array_push($ar4, $i);
+          log_msg("$i: $text\n");
+        }
+   }
+
+$nresults = sizeof($ar4);
+log_msg("nresults=$nresults\n");
+
+if ( $nresults == 0 )
+   { success_js(array('search' => 'none'));
+   }
+
+$num_records = $nresults;
+
+$page = 'search';
+
+$page_start = 'search.html';
+
+$index_end = floor($num_records / $page_records) + 1;
+$index_end2 = get_skype_index($index_end);
+$page_end = $page . $index_end2 . '.html';
+
+if ( $index_end == 1 )
+   { $page_start = $empty_link;
+     $page_end = $empty_link;
+   }
+ 
+$k = 0;
+
+// Формиране на HTML кода 
+for($i1 = 1; $i1 <= sizeof($ar4); $i1++)
+   {
+     $i = $ar4[$i1-1];
+
+     $line = $db_txt[$i-1];
+     if ( strcmp(substr($line,0,1), '#') == 0 )
+        { continue;
+        }
+
+     $db = explode('|', $line);
+     sizeof($db) == 5 || fail("line=$i parts=" . sizeof($db));
+
+     $date = $db[1-1];
+     $date = get_date($date);
+
+     $cat = $db[2-1];
+     $hash2[$cat] || fail("Enter category on line $i");
+
+     $cat_id = 'cat' . $cat;
+
+     $jpg_ar = explode(',', $db[3-1]);
+
+     $jpg_format_ar = explode(',', $db[4-1]);
+     if ( sizeof($jpg_format_ar) == 0 )
+        { for($j = 1; $j <= sizeof($jpg_ar); $j++)
+             { array_push($jpg_format_ar, 1);
+             }
+        }
+     //if ( sizeof($jpg_format_ar) != sizeof($jpg_ar) ) 
+     //   { $size_1 = sizeof($jpg_ar);
+     //     $size_2 = sizeof($jpg_format_ar);
+     //     fail("size_1=$size_1 size_2=$size_2");
+     //   }
+
+     $text = $db[5-1];
+
+     $k++;
+   }
+
+
+success_js(array('search' => 'ok'));
+
+
+//====================================================================================
+
+function log_msg($message)
+   { global $handle;
+
+     fwrite($handle, $message);
+   }
+function success_js($result)
+   {
+     $ar = array
+        ( "success" => "true",
+          "result" => $result, 
+        );
+     $result = json_encode($ar);
+     print "$result";
+     exit(0);
+   }
+function fail_js($result)
+   {
+     $ar = array
+        ( "success" => "false",
+          "result" => $result,
+        );
+     $result = json_encode($ar);
+     print "$result";
+     exit(-1);
+   }
+function get_db_records()
+   {
+     $file_ar = array
+        ( 'skype_db.txt',
+          'skype_db2.txt',
+        );
+     $db_ar = array();
+     for($i = 1; $i <= sizeof($file_ar); $i++)
+        { $file = $file_ar[$i-1];
+          file_exists($file) || fail();
+
+          $fhandle = fopen($file, 'r');
+          //$fhandle;
+          $fcontents = fread($fhandle, filesize($file));
+          fclose($fhandle);
+
+          $db_ar_tmp = explode("\n", $fcontents);
+          for($j = 1; $j <= sizeof($db_ar_tmp); $j++)
+             { if ( strlen($db_ar_tmp[$j-1]) > 0 )
+                  { array_push($db_ar, $db_ar_tmp[$j-1]);
+                  }
+             }
+        }
+     //log_msg("here\n");
+     return $db_ar;
+
+   }
+function fail($message)
+   {
+     //error_log("Error in line " . $message . "\n", 3, 'log.txt');
+     $ar = debug_backtrace();
+     $line = $ar[0]['line'];
+     error_log("Error in line=$line: $message\n", 3, 'log.txt');
+     fail_js(array('search' => 'error'));
+   }
+function get_skype_index($index)
+   {
+     return $index;
+   }
+function get_date($date)
+   {
+     return $date;
+   }
+?>

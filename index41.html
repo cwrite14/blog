@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index40.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index42.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 20:17 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Лятна градина, 1:4, размери: 46 х 37 см, конци: DMC, цена: 65 лв, фирма: Румина
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumina.com/peyzaji/718-lyatna-gradina">
+       <img src="content/images/PIC00260.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 20:43 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Пъстри цветя, 1:4, размери: 37 х 46 см, цена: 69.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-034--%D0%9F%D1%8A%D1%81%D1%82%D1%80%D0%B8-%D1%86%D0%B2%D0%B5%D1%82%D1%8F">
+       <img src="content/images/PIC00261.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 20:48 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Водопад, 1:4, размери: 52 х 40 см, цена: 69.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-564--%D0%92%D0%BE%D0%B4%D0%BE%D0%BF%D0%B0%D0%B4">
+       <img src="content/images/PIC00262.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 20:58 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Зимна панорама, 1:4, размери: 65 х 28 см, цена: 62.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-338--%D0%97%D0%B8%D0%BC%D0%BD%D0%B0-%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0">
+       <img src="content/images/PIC00263.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 21:07 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Къща на склона, 1:4, размери: 49 х 38 см, цена: 69.50 лв, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-262--%D0%9A%D1%8A%D1%89%D0%B0-%D0%BD%D0%B0-%D1%81%D0%BA%D0%BB%D0%BE%D0%BD%D0%B0">
+       <img src="content/images/PIC00264.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 21:17 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Макове, 1:4, размери: 74 х 54 см, цена: 125 лв, фирма: Румяна
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://goblenirumiana.com/stilllife-goblen-184--%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D0%B5">
+       <img src="content/images/PIC00265.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 21:21 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Буря над рифа, 1:4, размери: 25 х 40 см, цена: 38 лв, фирма: Румяна
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumiana.com/landscapes-goblen-146--%D0%91%D1%83%D1%80%D1%8F-%D0%BD%D0%B0%D0%B4-%D1%80%D0%B8%D1%84%D0%B0">
+       <img src="content/images/PIC00266.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">18 февруари 2017 г. 21:33 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Букет, Реноар, 1:4, размери: 58 х 42 см, цена: 132 лв, фирма: Румина
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumina.com/cvetya/371-buket">
+       <img src="content/images/PIC00267.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">20 февруари 2017 г. 21:34 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     ​14 лечебни добавки към чая
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/bilkolechenie/3533-14-lechebni-dobavki-kym-chaq">
+       <img src="content/images/PIC00268.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">24 февруари 2017 г. 20:22 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     В Куба произведоха ваксина против рака
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/zdrave/3547-v-kuba-proizvedoha-vaksina-protiv-raka">
+       <img src="content/images/PIC00269.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">24 февруари 2017 г. 20:36 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     САЩ прехвърлят в Европа най-новите си изтребители
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/sashch-prekhvrlyat-v-evropa-nay-novite-si-iztrebiteli_news491031.html">
+       <img src="content/images/PIC00270.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 март 2017 г. 21:16 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Армията на САЩ се въоръжава с ново мощно лазерно оръжие
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/lyubopitno/nauka-i-tekhnologii/armiyata-na-sashch-se-vorzhava-s-novo-moshchno-lazerno-orzhie_news497661.html">
+       <img src="content/images/PIC00271.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">23 март 2017 г. 20:39 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Тази елементарна напитка намалява риска от Алцхаймер с до 86%!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/tazi-elementarna-napitka-namalyava-riska-ot-altskhaymer-s-do-86_news498245.html">
+       <img src="content/images/PIC00272.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">25 март 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Този чай е просто задължителен за всички над 40! Мощното градинско биле лекува всичко - от грип до епилепсия!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/zdrave/tozi-chay-e-prosto-zadlzhitelen-za-vsichki-nad-40-moshchnoto-gradinsko-bile-lekuva-vsichko-ot-grip-do-epilepsiya_news498838.html">
+       <img src="content/images/PIC00273.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 март 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Днес се навършват 4 години от загубата на мравчо. Да си спомним с обич за него!
+ </div>
+ <div class="gallery3" name="cat04_1">
+    <a href="in_memoriam_mr.html">
+       <img src="content/images/DSC01503thm.JPG" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">31 март 2017 г. 21:03 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Оградата с новопоставените метални стълбове
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02627big.jpg" data-fancybox="images" data-caption="Оградата с новопоставените метални стълбове">
+       <img src="content/images/CAM02627thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">31 март 2017 г. 21:04 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Цветето-булка
+ </div>
+ <div class="gallery4" name="cat04">
+    <a class="zoom" href="content/images/CAM02628big.jpg" data-fancybox="images" data-caption="Цветето-булка">
+       <img src="content/images/CAM02628thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">04 април 2017 г. 20:47 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Уникално! Ново проучване разкри, че растение, което го има във всяка градина, бори рака
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/unikalno-novo-prouchvane-razkri-che-rastenie-koeto-go-ima-vv-vsyaka-gradina-bori-raka_news502009.html">
+       <img src="content/images/PIC00274.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">08 април 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Руската военна мощ набира сили!
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/lyubopitno/nauka-i-tekhnologii/ruskata-voenna-moshch-nabira-sili-vorzhavat-se-s_news503084.html">
+       <img src="content/images/PIC00275.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">08 април 2017 г. 21:03 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     10 удивителни факта за човешкия мозък
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/lyubopitno/10-udivitelni-fakta-za-choveshkiya-mozk_news503179.html">
+       <img src="content/images/PIC00276.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index40.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index42.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

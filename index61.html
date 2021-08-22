@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index60.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index62.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">13 май 2018 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко под пейката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04440big.jpg" data-fancybox="images" data-caption="Бушко под пейката">
+       <img src="content/images/CAM04440thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04441big.jpg" data-fancybox="images" data-caption="Бушко под пейката">
+       <img src="content/images/CAM04441thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">13 май 2018 г. 21:13 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30000960/%D0%BA%D0%B5%D1%82%D0%BE%D0%BD%D0%B0%D0%BB-%D0%B0%D0%BC%D0%BF-100-%D0%BC%D0%B3-2-%D0%BC%D0%BB-">Кетонал амп. 100 мг. 2 мл</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">13 май 2018 г. 21:16 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30007494/%D0%B4%D0%B5%D0%BA%D1%81%D0%BE%D1%84%D0%B5%D0%BD-%D0%B0%D0%BC%D0%BF-2-%D0%BC%D0%BB-1-berlin-chemie">Дексофен амп. 2 мл. * 1 BERLIN CHEMIE</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">14 май 2018 г. 18:27 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко и фенушката на чешмата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04446big.jpg" data-fancybox="images" data-caption="Бушко и фенушката на чешмата">
+       <img src="content/images/CAM04446thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">14 май 2018 г. 18:28 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко на леглото в 3тата стая
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04455big.jpg" data-fancybox="images" data-caption="Бушко на леглото в 3тата стая">
+       <img src="content/images/CAM04455thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">14 май 2018 г. 18:29 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Цъфнали божури в нашата градинка
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04459big.jpg" data-fancybox="images" data-caption="Цъфнали божури в нашата градинка">
+       <img src="content/images/CAM04459thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">15 май 2018 г. 22:39 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/11002877/%D0%BA%D0%B2%D0%B0%D0%BC%D0%B0%D1%82%D0%B5%D0%BB-%D0%B0%D0%BC%D0%BF-20-%D0%BC%D0%B3-1">Квамател ампули 20 мг. * 1</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">15 май 2018 г. 22:40 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30011975/%D1%86%D0%B5%D1%84%D1%82%D1%80%D0%B8%D0%B0%D0%BA%D1%81%D0%BE%D0%BD-%D1%84%D0%BB-1-%D0%B3-mip-pharma">Цефтриаксон фл. 1 г. MIP PHARMA</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">16 май 2018 г. 21:21 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко на тревата в градинката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04466big.jpg" data-fancybox="images" data-caption="Бушко на тревата в градинката">
+       <img src="content/images/CAM04466thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">17 май 2018 г. 17:55 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     100 пъти по-ефективно от химиотерапията! Билката глухарче, която убива раковите клетки в рамките на 48 часа
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="https://zdrave.to/alternativna-meditsina/100-pti-po-efektivno-ot-khimioterapiyata-bilkata-koyato-ubiva-rakovite-kletki-v-ramkite-na-48-chasa?pre=view">
+       <img src="content/images/PIC00757.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">19 май 2018 г. 21:44 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Двата божека на мостика
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04473big.jpg" data-fancybox="images" data-caption="Двата божека на мостика">
+       <img src="content/images/CAM04473thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">19 май 2018 г. 21:45 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето на крушовото пънче до стълбата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04477big.jpg" data-fancybox="images" data-caption="Патето на крушовото пънче до стълбата">
+       <img src="content/images/CAM04477thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">20 май 2018 г. 21:48 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката се е прибрала и слуша как два котака отвън се бият
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04485big.jpg" data-fancybox="images" data-caption="Фенушката се е прибрала и слуша как два котака отвън се бият">
+       <img src="content/images/CAM04485thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 май 2018 г. 20:05 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Кои са най-страшните ракетни кораби в света
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="https://www.blitz.bg/analizi-i-komentari/koi-sa-nay-strashnite-raketni-korabi-v-sveta_news585310.html">
+       <img src="content/images/PIC00759.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 май 2018 г. 20:06 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Китай ще печели войните на бъдещето
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="https://www.blitz.bg/analizi-i-komentari/kitay-shche-pecheli-voynite-na-bdeshcheto_news600120.html">
+       <img src="content/images/PIC00758.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2018 г. 20:07 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Пухчо, фенушката и патето на котешки час
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04490big.jpg" data-fancybox="images" data-caption="Пухчо, фенушката и патето на котешки час">
+       <img src="content/images/CAM04490thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2018 г. 20:08 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко пие вода
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04496big.jpg" data-fancybox="images" data-caption="Бушко пие вода">
+       <img src="content/images/CAM04496thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2018 г. 20:09 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката пие вода от кофичката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04500big.jpg" data-fancybox="images" data-caption="Фенушката пие вода от кофичката">
+       <img src="content/images/CAM04500thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2018 г. 20:10 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето на пънчето до чешмата
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04502big.jpg" data-fancybox="images" data-caption="Патето на пънчето до чешмата">
+       <img src="content/images/CAM04502thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">21 май 2018 г. 20:11 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката на слънчевия ъгъл на пейката
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM04506big.jpg" data-fancybox="images" data-caption="Фенушката на слънчевия ъгъл на пейката">
+       <img src="content/images/CAM04506thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index60.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index62.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

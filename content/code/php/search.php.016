@@ -1,0 +1,556 @@
+<?php
+
+$log_file = 'log.txt';
+$handle = fopen($log_file, "a");
+
+$no_result_flag = 0;
+if ( array_key_exists('search_key', $_POST) )
+   { $search_key = $_POST["search_key"];
+     if ( strlen($search_key) == 0 )
+        { $no_result_flag = 1;
+        }
+   }
+else
+   { fail();
+   }
+if ( $no_result_flag )
+   { log_msg("search_key=||\n");
+     success_js(array('search' => 'none'));
+   }
+
+if ( array_key_exists('category', $_POST) )
+   { $category = $_POST["category"];
+   }
+else
+   { fail();
+   }
+
+log_msg("==================================================================\n");
+log_msg("search_key=|$search_key|\n");
+//log_msg("category=$category\n");
+
+
+//============== обработка ========================
+$empty_link = 'javascript:';
+
+$page_records = 20;
+$index_prev;
+$index_next;
+$page_prev;
+$page_next;
+
+$page_dir = '../../../';
+
+$hash2 = array
+   ( '00' => 'Всичко',
+     '09' => 'Археология',
+     '01' => 'Билки',
+     '14' => 'Гоблени',
+     '13' => 'Забележителности',
+     '06' => 'Здраве',
+     '11' => 'Климат',
+     '15' => 'Красота',
+     '08' => 'Космос',
+     '02' => 'Котета',
+     '04' => 'Котешки свят',
+     '17' => 'Лекарства',
+     '05' => 'Оръжия',
+     '07' => 'Разни',
+     '10' => 'Религия',
+   );
+ 
+$out_file;
+
+$db_txt = get_db_records();
+//log_msg("database has " . sizeof($db_txt) . " lines\n");
+
+
+// Намиране на резултати
+$ar4 = array();
+
+for($i = 1; $i <= sizeof($db_txt); $i++)
+   { $line = $db_txt[$i-1];
+
+     if ( strcmp(substr($line,0,1), '#') == 0 )
+        { continue;
+        }
+
+     $db = explode("|", $line);
+     //log_msg("i=$i parts=" . sizeof($db) . "\n");
+     sizeof($db) == 5 || fail("line=$i parts=" . sizeof($db));
+
+     $text = $db[5-1];
+
+     //$search_key_low = mb_strtolower($search_key);
+     //$search_key_low = strtolower($search_key);
+     //$text_low = mb_strtolower($text);
+     //$text_low = strtolower($text);
+     //if ( preg_match("/$search_key/i", $text) )
+
+     $pos = mb_stripos($text, $search_key);
+     //$pos = stripos($text_low, $search_key_low);
+     if ( $pos !== false )
+        { array_push($ar4, $i);
+          //log_msg("$i: $text\n");
+        }
+   }
+
+$nresults = sizeof($ar4);
+log_msg("nresults=$nresults\n");
+
+if ( $nresults == 0 )
+   { success_js(array('search' => 'none'));
+   }
+
+$num_records = $nresults;
+
+$page = 'search';
+
+$page_start = 'search.html';
+
+$index_end = floor($num_records / $page_records) + 1;
+$index_end2 = get_skype_index($index_end);
+$page_end = $page . $index_end2 . '.html';
+
+if ( $index_end == 1 )
+   { $page_start = $empty_link;
+     $page_end = $empty_link;
+   }
+ 
+$k = 0;
+
+// Формиране на HTML кода 
+for($i1 = 1; $i1 <= sizeof($ar4); $i1++)
+   {
+     $i = $ar4[$i1-1];
+
+     $line = $db_txt[$i-1];
+     if ( strcmp(substr($line,0,1), '#') == 0 )
+        { continue;
+        }
+
+     $db = explode('|', $line);
+     sizeof($db) == 5 || fail("line=$i parts=" . sizeof($db));
+
+     $date = $db[1-1];
+     $date = get_date($date);
+
+     $cat = $db[2-1];
+     $hash2[$cat] || fail("Enter category on line $i");
+
+     $cat_id = 'cat' . $cat;
+
+     $jpg_ar = explode(',', $db[3-1]);
+
+     $jpg_format_ar = explode(',', $db[4-1]);
+     //if ( sizeof($jpg_format_ar) < sizeof($jpg_ar) )
+     if ( sizeof($jpg_format_ar) == 0 )
+        { //for($j = sizeof($jpg_format_ar)+1; $j <= sizeof($jpg_ar); $j++)
+          for($j = 1; $j <= sizeof($jpg_ar); $j++)
+             { array_push($jpg_format_ar, 1);
+             }
+        }
+     if ( sizeof($jpg_ar) != sizeof($jpg_format_ar) ) 
+        { $size_1 = sizeof($jpg_ar);
+          $size_2 = sizeof($jpg_format_ar);
+          fail("db_line=$i size_1=$size_1 size_2=$size_2");
+        }
+
+     $text = $db[5-1];
+
+     $k++;
+
+     if ( ($k % $page_records) == 1 )
+        { // отваряне на следващ файл
+
+          $index_cur = floor($k / $page_records) + 1;
+          $index_cur2 = get_skype_index($index_cur);
+          if ( $k == 1 )
+             { $index_cur2 = '';
+             }
+          $out_file = $page_dir . $page . $index_cur2 . '.html';
+
+          //open(OUT, ">:encoding(UTF-8)", $out_file) || die "$out_file $!";
+          $fh1 = fopen($out_file, 'w');
+          $fh1 || fail();
+
+          // запис на стрелки в началото на страницата
+          $index_prev = floor($k / $page_records);
+          $index_next = floor($k / $page_records) + 2;
+
+          $index_prev2 = get_skype_index($index_prev);
+          $page_prev = $page . $index_prev2 . '.html';
+          if ( $k == 1 )
+             { $page_prev = $empty_link;
+               // после остава така
+               $page_start = $empty_link;
+             }
+          if ( $k == $page_records + 1 )
+             { $page_prev = $page . '.html';
+               // на 2рата страница я коригираме
+               // така остава до края
+               $page_start = $page . '.html';
+             }
+
+          $index_next2 = get_skype_index($index_next);
+          $page_next = $page . $index_next2 . '.html';
+
+          if ( $k + $page_records > $num_records )
+             { $page_next = $empty_link;
+               $page_end = $empty_link;
+             }
+          $html_start = <<<HTML_START
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="robots" content="noindex, follow" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Търсене</title>
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" media="screen" href="content/themes/default/style.css" />
+   <script src="content/design/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <!--FANCYBOX-->
+</head>
+
+<body>
+
+<div id="main">
+  <div id="s_title_main">Котешки свят</div>
+
+  <div id=cat_holder_main>
+
+     <select id="catg_holder" name="catg_combo" size="1">
+       <option value="cat00">Всичко</option>
+       <option value="cat09">Археология</option>
+       <option value="cat01">Билки</option>
+       <option value="cat16">Времето</option>
+       <option value="cat14">Гоблени</option>
+       <option value="cat13">Забележителности</option>
+       <option value="cat06">Здраве</option>
+       <option value="cat11">Климат</option>
+       <option value="cat08">Космос</option>
+       <option value="cat02">Котета</option>
+       <option value="cat04">Котешки свят</option>
+       <option value="cat15">Красота</option>
+       <option value="cat17">Лекарства</option>
+       <option value="cat05">Оръжия</option>
+       <option value="cat07">Разни</option>
+       <option value="cat10">Религия</option>
+       <option value="cat03">Ривеста Стар</option>
+       <option value="cat12">Възпоминание</option>
+     </select>
+
+     <form id="form_search" action="content/design/cgi-bin/start.pl" method="POST" target="hiddenFrame">
+        <input id="search_id" type="text" name="search_key" placeholder="${search_key}" >
+        <!--<button type="submit"></button>-->
+        <!--<input type="button" value="Търсене" >-->
+        <input type="hidden" name="category" value="search_rq">
+        <!--<input type="submit" value="Търсене">-->
+        $num_records резултата
+        <input type="button" value="Обратно" onClick="form_search_clear()">
+     </form>
+
+     <script type="text/javascript" src="content/design/search/search.js"></script>
+     <script type="text/javascript">
+        function form_search_clear()
+           { document.getElementById('form_search').reset();
+             location.href = 'index.html';
+ 
+           }
+     </script>
+  </div>
+
+HTML_START;
+          fwrite($fh1, $html_start);
+
+          $html_7 = <<<HTML7
+<table class="arrows">
+<tr>
+<td>
+<div class="gallery5">
+   <a href="${page_start}">
+      <img src="content/themes/default/images/left_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="${page_prev}">
+      <img src="content/themes/default/images/left_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="${page_next}">
+      <img src="content/themes/default/images/right_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="${page_end}">
+      <img src="content/themes/default/images/right_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+      <img src="content/themes/default/images/down_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+</tr>
+</table>
+HTML7;
+          fwrite($fh1, $html_7);
+        }
+
+     // запис на пореден номер и дата
+     $html_1 = <<<HTML1
+<div class="h_line" name="${cat_id}_L>"></div>
+<div class="s_title"  name="${cat_id}_A">запис $k / $date</div>
+<div class="s_title2" name="${cat_id}_B">рубрика «$hash2[$cat]»</div>
+
+HTML1;
+     fwrite($fh1, $html_1);
+
+     // запис на снимки   
+     for($j = 1; $j <= sizeof($jpg_ar); $j++)
+        { $jpg = $jpg_ar[$j-1];
+
+          if ( preg_match('/href/', $text) )
+             {
+               // снимки с url - свързваме снимката към url
+               $j == 1 || fail();
+               preg_match('/href=\"(.*?)\"/', $text, $matches);
+               $url = $matches[1];
+
+               if ( $jpg_format_ar[$j-1] == 1 )
+                  { // хоризонтална снимка
+                    $html_11 = <<<HTML11
+<div class="gallery3" name="${cat_id}_$j">
+   <a href="$url">
+      <img src="content/images/skype/$jpg" alt="photo">
+   </a>
+</div>
+HTML11;
+                    fwrite($fh1, $html_11);
+                  }
+               else
+                  { // вертикална снимка
+                    $html_12 = <<<HTML12
+<div class="gallery3" name="${cat_id}_$j">
+   <a href="$url">
+      <img src="content/images/skype/$jpg" alt="photo" style="width: 52.5%; margin: 1% 23.75% 0 23.75%;">
+   </a>
+</div>
+HTML12;
+                    fwrite($fh1, $html_12);
+                  }
+             }
+          else
+             { // снимки с текст
+
+               $jpg_big = $jpg;
+               $jpg_thm = $jpg;
+
+               $beg = substr($jpg,0,3);
+               if ( strcmp($beg, 'DSC') == 0 || strcmp($beg, 'CAM') == 0 )
+                  { $jpg_big = str_replace('.', 'big.', $jpg_big);
+                    $jpg_thm = str_replace('.', 'thm.', $jpg_thm);
+                  }
+
+               if ( $jpg_format_ar[$j-1] == 1 )
+                  {
+                    $html_2 = <<<HTML2
+<div class="gallery3" name="$cat_id">
+   <a class="zoom" href="content/images/skype/$jpg_big" rel="group1">
+      <img src="content/images/skype/$jpg_thm" alt="photo">
+   </a>
+</div>
+HTML2;
+                    fwrite($fh1, $html_2);
+                  }
+               else
+                  {
+                    $html_9 = <<<HTML9
+<div class="gallery3" name="$cat_id">
+   <a class="zoom" href="content/images/skype/$jpg_big" rel="group1">
+      <img src="content/images/skype/$jpg_thm" alt="photo" style="width: 52.5%; margin: 1% 23.75% 0 23.75%;">
+   </a>
+</div>
+HTML9;
+                    fwrite($fh1, $html_9);
+                  }
+             }
+        }
+     // запис на текст 
+     $html_3 = <<<HTML3
+<div class="s_text" name="${cat_id}_T">
+   $text
+</div>
+
+HTML3;
+     fwrite($fh1, $html_3);
+
+     if ( ($k % $page_records) == 0 || $k == $num_records )
+        {
+          // запис на стрелки в края на страницата
+          $html_8 = <<<HTML8
+<table class="arrows">
+<tr>
+<td>
+<div class="gallery5">
+   <a href="${page_start}">
+      <img src="content/themes/default/images/left_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="$page_prev">
+      <img src="content/themes/default/images/left_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="$page_next">
+      <img src="content/themes/default/images/right_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="${page_end}">
+      <img src="content/themes/default/images/right_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="javascript:window.scrollTo(0, 0)">
+      <img src="content/themes/default/images/up_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+</tr>
+</table>
+<div id="Dialog1"><div id="Dialog1Text"></div></div>
+</div>
+ 
+</body>
+</html>
+HTML8;
+          fwrite($fh1, $html_8);
+          fclose($fh1);
+        }
+   }
+
+log_msg("done\n");
+
+success_js(array('search' => 'ok'));
+
+
+//====================================================================================
+
+function log_msg($message)
+   { global $handle;
+
+     $timestamp = strftime('%Y-%m-%d %H:%M:%S', time());
+     fwrite($handle, $timestamp . ' ' . $message);
+   }
+function success_js($result)
+   {
+     $ar = array
+        ( "success" => "true",
+          "result" => $result, 
+        );
+     $result = json_encode($ar);
+     print "$result";
+     exit(0);
+   }
+function fail_js($result)
+   {
+     $ar = array
+        ( "success" => "false",
+          "result" => $result,
+        );
+     $result = json_encode($ar);
+     print "$result";
+     exit(-1);
+   }
+function get_db_records()
+   {
+     $file_ar = array
+        ( 'skype_db.txt',
+          'skype_db2.txt',
+        );
+     $db_ar = array();
+     for($i = 1; $i <= sizeof($file_ar); $i++)
+        { $file = $file_ar[$i-1];
+          file_exists($file) || fail();
+
+          $fhandle = fopen($file, 'r');
+          //$fhandle;
+          $fcontents = fread($fhandle, filesize($file));
+          fclose($fhandle);
+
+          $db_ar_tmp = explode("\n", $fcontents);
+          for($j = 1; $j <= sizeof($db_ar_tmp); $j++)
+             { if ( strlen($db_ar_tmp[$j-1]) > 0 )
+                  { array_push($db_ar, $db_ar_tmp[$j-1]);
+                  }
+             }
+        }
+     //log_msg("here\n");
+     return $db_ar;
+
+   }
+function fail($message)
+   {
+     //error_log("Error in line " . $message . "\n", 3, 'log.txt');
+     $ar = debug_backtrace();
+     $line = $ar[0]['line'];
+     $timestamp = strftime('%Y-%m-%d %H:%M:%S', time());
+     error_log("$timestamp Error in line=$line: $message\n", 3, 'log.txt');
+     fail_js(array('search' => 'error'));
+   }
+function get_skype_index($index)
+   {
+     //$index_new = $index < 10 ? "0$index" : $index;
+     $index_new = sprintf("%02d", $index);
+     return $index_new;
+   }
+function get_date($date_p)
+   {
+     $date_ar = explode(' ', $date_p);
+     sizeof($date_ar) == 2 || fail();
+     $date_hash = array
+        ( '01' => 'януари',
+          '02' => 'февруари',
+          '03' => 'март',
+          '04' => 'април',
+          '05' => 'май',
+          '06' => 'юни',
+          '07' => 'юли',
+          '08' => 'август',
+          '09' => 'септември',
+          '10' => 'октомври',
+          '11' => 'ноември',
+          '12' => 'декември',
+        );
+     $date_comp = explode('-', $date_ar[1-1]);
+     sizeof($date_comp) == 3 || fail();
+     $month = $date_comp[2-1];
+     $day = $date_comp[3-1];
+     $year = $date_comp[1-1];
+     $date_new = $day . ' ' . $date_hash{$month} . ' ' . $year;
+     $time = $date_ar[2-1];
+     $date_new .= ' / ' . $time;
+
+     return $date_new;
+   }
+?>

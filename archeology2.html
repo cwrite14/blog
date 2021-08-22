@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="archeology1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology1.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">11 септември 2016 г. 12:14 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Най-голямата пирамида в света е скрита под един хълм
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/444010">
+       <img src="content/images/PIC00437.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">13 септември 2016 г. 12:40 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Десетте най-загадъчни мистерии в историята на човечеството
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/444413">
+       <img src="content/images/PIC00443.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">19 септември 2016 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     В сърцето на Странджа се крие българският Стоунхендж
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/446271">
+       <img src="content/images/PIC00466.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">07 октомври 2016 г. 11:27 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Историк от Търново обяви сензационно: Светлинни сфери кръжат около гробовете на българските царе!
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/451148">
+       <img src="content/images/PIC00476.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">15 октомври 2016 г. 21:35 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Откриха нещо наистина странно в Хеопсовите пирамиди 
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/453969">
+       <img src="content/images/PIC00505.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">22 октомври 2016 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Гигантска тайнствена пирамида е открита в Галилейско море 
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/194229">
+       <img src="content/images/PIC00538.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">24 октомври 2016 г. 20:25 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Разчетоха 10-те заповеди на Чингис хан
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/456694">
+       <img src="content/images/PIC00545.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">19 ноември 2016 г. 20:12 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Сензационни находки в Египет може да променят цялата световна история
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/evrika/senzatsionni-nakhodki-v-egipet-mozhe-da-promenyat-tsyalata-svetovna-istoriya-snimki_news464221.html">
+       <img src="content/images/PIC00581.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">19 ноември 2016 г. 20:23 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Археолози са открили край Стоунхендж голям религиозен комплекс, построен преди 5600 г.
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/arkheolozi-sa-otkrili-kray-stounkhendzh-golyam-religiozen-kompleks-postroen-predi-5600-g_news464395.html">
+       <img src="content/images/PIC00585.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">24 ноември 2016 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Уникално: Откриха най-древната столица на Египет
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/unikalno-otkrikha-nay-drevnata-stolitsa-na-egipet_news465854.html">
+       <img src="content/images/PIC00597.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">30 ноември 2016 г. 21:21 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Египетският Индиана Джоунс: Скоро откриваме гробницата на Клеопатра
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/svyat/egipetskiyat-indiana-dzhouns-skoro-otkrivame-grobnitsata-na-kleopatra-video_news467693.html">
+       <img src="content/images/PIC00607.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">01 декември 2016 г. 20:20 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Хеопсовата пирамида е изкривена, египтяни са допуснали „детинска грешка“
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.vesti.bg/lyubopitno/lyubopitno/heopsovata-piramida-e-kriva-dopusnata-e-greshka-6055304">
+       <img src="content/images/PIC00102.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">01 декември 2016 г. 20:25 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Археолози откриха защитен механизъм в Хеопсовата пирамида
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.vesti.bg/lyubopitno/lyubopitno/otkriha-drevna-alarma-v-heopsovata-piramida-6057099">
+       <img src="content/images/PIC00103.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">01 декември 2016 г. 20:33 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Сензация на 2000 години! Намериха първото писмено доказателство за живота на Исус Христос
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/goreshtite-novini/senzatsiya-na-2000-godini-namerikha-prvoto-pismeno-dokazatelstvo-za-zhivota-na-isus-khristos_news467649.html">
+       <img src="content/images/PIC00608.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">01 декември 2016 г. 20:34 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     В дебрите: Злокобен град на мъртвите с отворени гробове се крие в Странджа!
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/daydzhest/v-debrite-zlokoben-grad-na-mrtvite-s-otvoreni-grobove-se-krie-v-strandzha_news467805.html">
+       <img src="content/images/PIC00609.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">08 декември 2016 г. 21:11 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Ключ към Древен Египет се крие в Странджа
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/obshtestvo/samo-vv-v-nad-55-klyuch-km-dreven-egipet-se-krie-v-strandzha_news468256.html">
+       <img src="content/images/PIC00618.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">15 декември 2016 г. 20:36 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Петте най-големи загадки от древността, които не дават покой на човечеството
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/lyubopitno/pette-nay-golemi-zagadki-ot-drevnostta-koito-ne-davat-pokoy-na-chovechestvoto-snimki_news471643.html">
+       <img src="content/images/PIC00635.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">17 януари 2017 г. 21:39 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Невероятно! Разкриха древната мистерия на платото Наска!
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/lyubopitno/evrika/neveroyatno-razkrikha-drevnata-misteriya-na-platoto-naska_news480420.html">
+       <img src="content/images/PIC00160.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">08 февруари 2017 г. 21:22 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Уникална находка: Археолози откриха кораб, потънал с безценен метал от Атлантида преди 2600 години!
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/svyat/unikalna-nakhodka-arkheolozi-otkrikha-korab-potnal-s-beztsenen-metal-ot-atlantida-predi-2600-godini_news486537.html">
+       <img src="content/images/PIC00198.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">26 септември 2017 г. 20:42 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Учени сензационно: Три от намерените в Перу мумии са на извънземни рептилии
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="https://www.blitz.bg/lyubopitno/evrika/ucheni-senzatsionno-tri-ot-namerenite-v-peru-mumii-sa-na-izvnzemni-reptilii-snimkivideo_news544762.html">
+       <img src="content/images/PIC00671.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="archeology1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology1.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="archeology.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

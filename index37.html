@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index36.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index38.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 20:59 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Най-чаканият СПИСЪК на храните, които трябва да ядем, за да се предпазим от рак
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/nay-chakaniyat-spisbk-na-khranite-koito-tryabva-da-yadem-za-da-se-predpazim-ot-rak_news483963.html">
+       <img src="content/images/PIC00178.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:01 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Излезе СПИСЪК с най-вредните храни и напитки в България! Вижте кои продукти ни тровят и разболяват най-много
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/izleze-spisbk-s-nay-vrednite-khrani-i-napitki-v-blgariya-vizhte-koi-produkti-ni-trovyat-i-razbolyavat-nay-mnogo_news484040.html">
+       <img src="content/images/PIC00179.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Преяждането може да доведе до инсулт или инфаркт
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/3375-preqjdaneto-moje-da-dovede-do-insult-ili-infarkt">
+       <img src="content/images/PIC00180.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:03 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     ​7 заблуди за здравословното хранене
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/3358-7-zabludi-za-zdravoslovnoto-hranene">
+       <img src="content/images/PIC00181.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:04 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Медици съставиха списък с най-полезните консерви през зимата
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/obshtestvo/meditsi-sstavikha-spisk-s-nay-poleznite-konservi-prez-zimata_news484089.html">
+       <img src="content/images/PIC00182.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:05 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Диета за дълголетници: Как трябва да се храним, за да бъдем здрави до дълбока старост
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/obshtestvo/dieta-za-dlgoletnitsi-kak-tryabva-da-se-khranim-za-da-bdem-zdravi-do-dlboka-starost_news484070.html">
+       <img src="content/images/PIC00183.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Възрастта се определя от състоянието на кръвоносните съдове и костите
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/tqlo/3384-vyzrastta-se-opredelq-ot-systoqnieto-na-kryvonosnite-sydove-i-kostite">
+       <img src="content/images/PIC00184.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat13_L>"></div>
+ <div class="s_title"  name="cat13_A">02 февруари 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat13_B">Категория &quot;Забележителности&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat13_T">
+     Хит! Замъкът в Равадиново „Най-добър за сватба“
+ </div>
+ <div class="gallery3" name="cat13_1">
+    <a href="http://pik.bg/%D1%85%D0%B8%D1%82-%D0%B7%D0%B0%D0%BC%D1%8A%D0%BA%D1%8A%D1%82-%D0%B2-%D1%80%D0%B0%D0%B2%D0%B0%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE-%D0%BD%D0%B0%D0%B9-%D0%B4%D0%BE%D0%B1%D1%8A%D1%80-%D0%B7%D0%B0-%D1%81%D0%B2%D0%B0%D1%82%D0%B1%D0%B0-news628922.html">
+       <img src="content/images/PIC00185.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">02 февруари 2017 г. 21:14 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Кардиолог от ВМА предупреди: Мозъкът ни спира да работи при влага и мъгла!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/kardiolog-ot-vma-predupredi-mozkt-ni-spira-da-raboti-pri-vlaga-i-mgla_news484682.html">
+       <img src="content/images/PIC00186.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">02 февруари 2017 г. 21:15 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учените назоваха неочаквани вредни свойства на два полезни продукта, които употребяваме всеки ден
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/uchenite-nazovakha-neochakvani-vredni-svoystva-na-dva-polezni-produkta-koito-upotrebyavame-vseki-den_news484669.html">
+       <img src="content/images/PIC00187.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">02 февруари 2017 г. 21:17 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Една съставка в кафето и ще забравите за проблемите с бъбреците и лошия дъх
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/zdrave/edna-sstavka-v-kafeto-i-shche-zabravite-za-problemite-s-bbretsite-i-loshiya-dukh_news484651.html">
+       <img src="content/images/PIC00188.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">05 февруари 2017 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Чудотворно от природата: Лечебната сила на чесъна
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://www.blitz.bg/zdrave/chudotvorno-ot-prirodata-lechebnata-sila-na-chesna_news485523.html">
+       <img src="content/images/PIC00189.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat13_L>"></div>
+ <div class="s_title"  name="cat13_A">05 февруари 2017 г. 20:54 ч.</div>
+ <div class="s_title2" name="cat13_B">Категория &quot;Забележителности&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat13_T">
+     Археолози разкриха къде Хитлер може да е скрил едно от най-големите съкровища на Русия
+ </div>
+ <div class="gallery3" name="cat13_1">
+    <a href="http://www.blitz.bg/svyat/arkheolozi-razkrikha-kde-khitler-mozhe-da-e-skril-edno-ot-nay-golemite-skrovishcha-na-rusiya_news485454.html">
+       <img src="content/images/PIC00190.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">06 февруари 2017 г. 20:50 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Строи се ледоразбивач, цепещ 3 метра лед! Русия усвоява Арктика с невиждано темпо
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/stroi-se-ledorazbivach-tsepeshch-3-metra-led-rusiya-usvoyava-arktika-s-nevizhdano-tempo-infografika_news485940.html">
+       <img src="content/images/PIC00191.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat02_L>"></div>
+ <div class="s_title"  name="cat02_A">06 февруари 2017 г. 21:14 ч.</div>
+ <div class="s_title2" name="cat02_B">Категория &quot;Котета&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat02_T">
+     Това е котаракът Коби, неговите сини очи ще ви хипнотизират
+ </div>
+ <div class="gallery3" name="cat02_1">
+    <a href="http://www.blitz.bg/lyubopitno/tova-e-kotarakt-kobi-negovite-sini-ochi-shche-vi-khipnotizirat-snimki_news485871.html">
+       <img src="content/images/PIC00192.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat13_L>"></div>
+ <div class="s_title"  name="cat13_A">07 февруари 2017 г. 21:01 ч.</div>
+ <div class="s_title2" name="cat13_B">Категория &quot;Забележителности&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat13_T">
+     14–те най-добри града в Европа ако пътувате сами
+ </div>
+ <div class="gallery3" name="cat13_1">
+    <a href="http://www.blitz.bg/layfstayl/ptuvane/14te-nay-dobri-grada-v-evropa-ako-ptuvate-sami-snimki_news486268.html">
+       <img src="content/images/PIC00194.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">08 февруари 2017 г. 21:16 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Извънредна новина от Кремъл! Путин нареди: Гответе се за война! 
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/izvnredna-novina-ot-kreml-putin-naredi-gotvete-se-za-voyna-snimkavideo_news486280.html">
+       <img src="content/images/PIC00195.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">08 февруари 2017 г. 21:18 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Голям пробив: Учени връщат към живота 11 изчезнали животински вида
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/lyubopitno/golyam-probiv-ucheni-vrshchat-km-zhivota-11-izcheznali-zhivotinski-vida-snimki_news486399.html">
+       <img src="content/images/PIC00197.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">08 февруари 2017 г. 21:22 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     Уникална находка: Археолози откриха кораб, потънал с безценен метал от Атлантида преди 2600 години!
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/svyat/unikalna-nakhodka-arkheolozi-otkrikha-korab-potnal-s-beztsenen-metal-ot-atlantida-predi-2600-godini_news486537.html">
+       <img src="content/images/PIC00198.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">08 февруари 2017 г. 21:31 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Русия наистина се готви за война? 45 хиляди войници, 150 самолета и 200 противовъздушни ракетни системи завардиха Москва
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/rusiya-naistina-se-gotvi-za-voyna-45-khilyadi-voynitsi-150-samoleta-i-200-protivovzdushni-raketni-sistemi-zavardikha-moskva_news486539.html">
+       <img src="content/images/PIC00199.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index36.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index38.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

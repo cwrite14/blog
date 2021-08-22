@@ -1,0 +1,45 @@
+//
+// изпраща формата за поща на Perl скрипт
+// посредством синхронна ajax заявка
+//
+$('form#form_mail').submit(function()
+   {
+    //alert("mail.js");
+    //alert(document.location.host);
+
+    $('#form_gif').show();
+    //document.getElementById('form_gif').style.display = 'block';;
+
+    var script_url = $(this).attr('action');
+
+    //var script_url;
+
+    if ( document.location.host == 'localhost' )
+       { script_url = '../../../../../cgi/' + script_url;
+       }
+    else
+       { script_url = 'http://cgi-rivesta.rhcloud.com/' + script_url;
+       }
+    //alert(script_url);
+
+    var response = $.ajax({
+             type     : "POST",
+             cache    : false,
+             //url      : $(this).attr('action'),
+             url      : script_url,
+             data     : $(this).serializeArray(),
+             dataType : 'script',
+             async: false,
+     }).responseText;
+    //alert(response);
+
+    $('#form_gif').hide();
+    //document.getElementById('form_gif').style.display = 'none';;
+
+    if ( /success/.test(response) )
+       { $('#form_mail')[0].reset();
+         //document.getElementById('form_mail').reset();
+       }
+
+    return false;
+   });

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index17.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index19.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">17 септември 2016 г. 13:22 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Топ 8 на оръжейните новости в Русия от форума „Армия 2016“
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/445543">
+       <img src="content/images/PIC00465.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 септември 2016 г. 15:22 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Цъфналият тромпет
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02061big.jpg" data-fancybox="images" data-caption="Цъфналият тромпет">
+       <img src="content/images/CAM02061thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 септември 2016 г. 15:23 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Новото любимо място на моряка
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02066big.jpg" data-fancybox="images" data-caption="Новото любимо място на моряка">
+       <img src="content/images/CAM02066thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">17 септември 2016 г. 15:23 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02072big.jpg" data-fancybox="images" data-caption="Бушко">
+       <img src="content/images/CAM02072thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02079big.jpg" data-fancybox="images" data-caption="Бушко">
+       <img src="content/images/CAM02079thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat09_L>"></div>
+ <div class="s_title"  name="cat09_A">19 септември 2016 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat09_B">Категория &quot;Археология&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat09_T">
+     В сърцето на Странджа се крие българският Стоунхендж
+ </div>
+ <div class="gallery3" name="cat09_1">
+    <a href="http://www.blitz.bg/news/article/446271">
+       <img src="content/images/PIC00466.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">19 септември 2016 г. 20:55 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Колко ужасяващо пренаселен е Китай
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/news/article/446231">
+       <img src="content/images/PIC00467.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">20 септември 2016 г. 20:45 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Заплашват ни чума и холера от топенето на ледовете
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/article/45917">
+       <img src="content/images/PIC00468.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat13_L>"></div>
+ <div class="s_title"  name="cat13_A">23 септември 2016 г. 19:00 ч.</div>
+ <div class="s_title2" name="cat13_B">Категория &quot;Забележителности&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat13_T">
+     Tоп 5: Най-странните небостъргачи в света
+ </div>
+ <div class="gallery3" name="cat13_1">
+    <a href="http://www.blitz.bg/news/article/447437">
+       <img src="content/images/PIC00469.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat07_L>"></div>
+ <div class="s_title"  name="cat07_A">24 септември 2016 г. 15:16 ч.</div>
+ <div class="s_title2" name="cat07_B">Категория &quot;Разни&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat07_T">
+     Ето какво се случва в Русе след земетресението във Вранча
+ </div>
+ <div class="gallery3" name="cat07_1">
+    <a href="http://www.blitz.bg/news/article/447666">
+       <img src="content/images/PIC00470.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">24 септември 2016 г. 15:22 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Вижте кои влизат в топ 3 на най-добрите армии в света
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/447306">
+       <img src="content/images/PIC00471.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 септември 2016 г. 14:32 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето с малката топка
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02092big.jpg" data-fancybox="images" data-caption="Патето с малката топка">
+       <img src="content/images/CAM02092thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 септември 2016 г. 14:33 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Едно грамофонче, цъфнало при дивите лози тромпет
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02098big.jpg" data-fancybox="images" data-caption="Едно грамофонче, цъфнало при дивите лози тромпет">
+       <img src="content/images/CAM02098thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 септември 2016 г. 14:34 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето с любимата играчка-гъба
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02106big.jpg" data-fancybox="images" data-caption="Патето с любимата играчка-гъба">
+       <img src="content/images/CAM02106thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">28 септември 2016 г. 14:34 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Фенушката на котешката наблюдателница
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02109big.jpg" data-fancybox="images" data-caption="Фенушката на котешката наблюдателница">
+       <img src="content/images/CAM02109thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">30 септември 2016 г. 12:47 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Руските подводници стават невидими за сонарите
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/449303">
+       <img src="content/images/PIC00667.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">30 септември 2016 г. 14:04 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Патето на пъна до котешката наблюдателница
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02113big.jpg" data-fancybox="images" data-caption="Патето на пъна до котешката наблюдателница">
+       <img src="content/images/CAM02113thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02115big.jpg" data-fancybox="images" data-caption="Патето на пъна до котешката наблюдателница">
+       <img src="content/images/CAM02115thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat11_L>"></div>
+ <div class="s_title"  name="cat11_A">30 септември 2016 г. 18:19 ч.</div>
+ <div class="s_title2" name="cat11_B">Категория &quot;Климат&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat11_T">
+     Идва студено време
+ </div>
+ <div class="gallery3" name="cat11_1">
+    <a href="http://www.blitz.bg/news/article/449424">
+       <img src="content/images/PIC00472.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">01 октомври 2016 г. 18:47 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Новият руски космически кораб „Федерация“ ще лети с хептил
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/449726">
+       <img src="content/images/PIC00473.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 октомври 2016 г. 14:13 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Бушко
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02142big.jpg" data-fancybox="images" data-caption="Бушко">
+       <img src="content/images/CAM02142thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02140big.jpg" data-fancybox="images" data-caption="Бушко">
+       <img src="content/images/CAM02140thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <div class="s_title"  name="cat04_A">05 октомври 2016 г. 14:14 ч.</div>
+ <div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat04_T">
+     Градинката от невен е цъфнала
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02150big.jpg" data-fancybox="images" data-caption="Градинката от невен е цъфнала">
+       <img src="content/images/CAM02150thm.jpg" alt="photo">
+    </a>
+ </div>
+ <div class="gallery3" name="cat04">
+    <a class="zoom" href="content/images/CAM02162big.jpg" data-fancybox="images" data-caption="Градинката от невен е цъфнала">
+       <img src="content/images/CAM02162thm.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat04_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index17.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index19.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

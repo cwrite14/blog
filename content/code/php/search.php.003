@@ -1,0 +1,58 @@
+<?php
+
+//print("Hello World");
+
+$log_file = 'log.txt';
+$handle = fopen($log_file, "a");
+
+$no_result_flag = 0;
+if ( array_key_exists('search_key', $_POST) )
+   { $search_key = $_POST["search_key"];
+     if ( strlen($search_key) == 0 )
+        { $no_result_flag = 1;
+        }
+   }
+else
+   { //$no_result_flag = 1;
+     die;
+   }
+if ( $no_result_flag )
+   { log_msg("search_key=\n");
+     success_js(array('search' => 'none'));
+   }
+
+//$search_key = $_POST["search_key"];
+if ( array_key_exists('category', $_POST) )
+   { $category = $_POST["category"];
+   }
+else
+   { //log_msg("no category\n");
+     die;
+   }
+
+log_msg("search_key=$search_key\n");
+log_msg("category=$category\n");
+
+
+success_js(array('search' => 'ok'));
+
+
+//====================================================================================
+
+function log_msg($message)
+   { global $handle;
+
+     fwrite($handle, $message);
+   }
+function success_js($result)
+   {
+     $ar = array
+        ( "success" => "true",
+          "result" => $result, 
+        );
+     $result = json_encode($ar);
+     print "$result";
+     exit(0);
+   }
+
+?>

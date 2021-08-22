@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="robots" content="noindex, follow" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Котешки свят</title>
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+
+   <!-- jQuery library -->
+   <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+
+   <!-- jQuery - graphical -->
+   <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+   <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+
+   <!-- FancyBox -->
+   <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+
+   <script src="fancybox3.js"></script>
+
+</head>
+
+<body>
+
+<div id="main">
+  <div id="s_title_main">
+     Котешки свят
+
+     <div id="dash">
+        <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+     </div>
+  </div>
+
+  <div id=cat_holder_main>
+     <!--
+     <div id ="main_line_text">
+      
+        <div id ="catg_holder_text">
+           Рубрика
+        </div>
+      
+        <div id ="color_holder_text">
+           Тема
+        </div>
+      
+     </div>
+     --> 
+
+     <div id ="main_line">
+
+        <select id="catg_holder" name="catg_combo" size="1">
+          <option value="cat00">Всичко</option>
+          <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+          <option value="cat09">Археология</option>
+          <option value="cat01">Билки</option>
+          <option value="cat16">Времето</option>
+          <option value="cat14">Гоблени</option>
+          <option value="cat12">Древен Египет</option>
+          <option value="cat13">Забележителности</option>
+          <option value="cat06">Здраве</option>
+          <option value="cat11">Климат</option>
+          <option value="cat02">Котета</option>
+          <option value="cat04">Котешки свят</option>
+          <option value="cat15">Красота</option>
+          <option value="cat17">Лекарства</option>
+          <option value="cat18">Любими</option>
+          <option value="cat05">Оръжия</option>
+          <option value="cat07">Разни</option>
+          <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+          <option value="cat03">Ривеста Стар</option>
+          <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+          <!-- <optgroup label="Възпоминание"> -->
+             <option value="cat21">Белушанко</option>
+             <option value="cat22">Мравчо</option>
+             <option value="cat23">Малкият тъжен мишо</option>
+             <option value="cat24">Тъжният мишо</option>
+          <!-- </optgroup> -->
+        </select>
+
+        <select id="color_holder" name="color_combo" size="1">
+           <optgroup label="Обикновена">
+              <option value="S1">Обикновена жълта</option>
+              <option value="S2">Обикновена черна</option>
+              <option value="S3">Обикновена червена</option>
+              <option value="S4">Обикновена синя</option>
+              <option value="S5">Обикновена бледа</option>
+          </optgroup>
+          <optgroup label="Панорамна">
+             <option value="P1">Панорамна червена</option>
+             <option value="P2">Панорамна синя</option>
+             <option value="P3">Панорамна черна</option>
+          </optgroup>
+          <optgroup label="Воден знак">
+             <option value="W1">Воден знак кафява</option>
+             <option value="W2">Воден знак бежова</option>
+             <option value="W3">Воден знак зелена</option>
+             <option value="W4">Воден знак розова</option>
+          </optgroup>
+        </select>
+
+     </div>     <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+        <input id="search_id" type="text" name="search_key" placeholder="бачко" >
+        <input type="hidden" name="category" value="search_rq">
+        <div id="search_result"> 74 резултата</div>
+        <input type="button" value="Обратно" onClick="form_search_clear()">
+     </form>
+
+     <script type="text/javascript" src="content/code/search/search.js"></script>
+     <script type="text/javascript">
+        function form_search_clear()
+           { 
+             location.href = 'index.html';
+             document.getElementById('form_search').reset();
+           }
+     </script>
+  </div><table class="arrows">
+<tr>
+<td>
+<div class="gallery5">
+   <a href="javascript:">
+      <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="javascript:">
+      <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="search2.html">
+      <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="search.html">
+      <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td><td>
+<div class="gallery5">
+   <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+      <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+</tr>
+</table><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">06 февруари 2016 г. 23:02 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Доброто момче бачко
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM01064big.jpg" data-fancybox="images" data-caption="Доброто момче бачко">
+      <img src="content/images/CAM01064thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">17 февруари 2016 г. 19:36 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Белушанко и бачко, с патето и фенушката - като за снимка
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/DSC01393big.JPG" data-fancybox="images" data-caption="Белушанко и бачко, с патето и фенушката - като за снимка">
+      <img src="content/images/DSC01393thm.JPG" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">13 май 2016 г. 22:52 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Патето и бачко
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM01357big.jpg" data-fancybox="images" data-caption="Патето и бачко">
+      <img src="content/images/CAM01357thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">26 юни 2016 г. 22:34 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко доброто момче и пухчо
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM01489big.jpg" data-fancybox="images" data-caption="Бачко доброто момче и пухчо">
+      <img src="content/images/CAM01489thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">05 август 2016 г. 22:23 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Пухчо на новите завивки във 2рата стая, бачко наднича
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM01685big.jpg" data-fancybox="images" data-caption="Пухчо на новите завивки във 2рата стая, бачко наднича">
+      <img src="content/images/CAM01685thm.jpg" alt="photo">
+   </a>
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM01688big.jpg" data-fancybox="images" data-caption="Пухчо на новите завивки във 2рата стая, бачко наднича">
+      <img src="content/images/CAM01688thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">07 ноември 2016 г. 20:33 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко на синята фланела
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02373big.jpg" data-fancybox="images" data-caption="Бачко на синята фланела">
+      <img src="content/images/CAM02373thm.jpg" alt="photo">
+   </a>
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02379big.jpg" data-fancybox="images" data-caption="Бачко на синята фланела">
+      <img src="content/images/CAM02379thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">11 ноември 2016 г. 20:29 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и зайко на синята фланела
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02384big.jpg" data-fancybox="images" data-caption="Бачко и зайко на синята фланела">
+      <img src="content/images/CAM02384thm.jpg" alt="photo">
+   </a>
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02388big.jpg" data-fancybox="images" data-caption="Бачко и зайко на синята фланела">
+      <img src="content/images/CAM02388thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">11 ноември 2016 г. 20:32 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Фенушката и бачко на големия пън
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02394big.jpg" data-fancybox="images" data-caption="Фенушката и бачко на големия пън">
+      <img src="content/images/CAM02394thm.jpg" alt="photo">
+   </a>
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02398big.jpg" data-fancybox="images" data-caption="Фенушката и бачко на големия пън">
+      <img src="content/images/CAM02398thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">15 декември 2016 г. 20:40 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и фенушката
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02486big.jpg" data-fancybox="images" data-caption="Бачко и фенушката">
+      <img src="content/images/CAM02486thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">11 май 2017 г. 21:12 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко на големия пън
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02701big.jpg" data-fancybox="images" data-caption="Бачко на големия пън">
+      <img src="content/images/CAM02701thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">11 май 2017 г. 21:13 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Дупльо, бачко и фенушката на големите пънове
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02711big.jpg" data-fancybox="images" data-caption="Дупльо, бачко и фенушката на големите пънове">
+      <img src="content/images/CAM02711thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">12 май 2017 г. 21:14 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко, дупльо и фенушката с двата божура
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02745big.jpg" data-fancybox="images" data-caption="Бачко, дупльо и фенушката с двата божура">
+      <img src="content/images/CAM02745thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">04 юли 2017 г. 20:34 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и пухчо на големия пън
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM02998big.jpg" data-fancybox="images" data-caption="Бачко и пухчо на големия пън">
+      <img src="content/images/CAM02998thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">05 декември 2017 г. 17:43 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и фенушката на пънчето до чешмата
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03157big.jpg" data-fancybox="images" data-caption="Бачко и фенушката на пънчето до чешмата">
+      <img src="content/images/CAM03157thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">05 декември 2017 г. 17:46 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко на мостика
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03169big.jpg" data-fancybox="images" data-caption="Бачко на мостика">
+      <img src="content/images/CAM03169thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">05 декември 2017 г. 17:55 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и 3те пухляка на пейката
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03205big.jpg" data-fancybox="images" data-caption="Бачко и 3те пухляка на пейката">
+      <img src="content/images/CAM03205thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">05 декември 2017 г. 17:56 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко, зайко и фенушката на пейката
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03211big.jpg" data-fancybox="images" data-caption="Бачко, зайко и фенушката на пейката">
+      <img src="content/images/CAM03211thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">07 декември 2017 г. 18:08 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Дупльо, бачко и патето на чешмата
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03278big.jpg" data-fancybox="images" data-caption="Дупльо, бачко и патето на чешмата">
+      <img src="content/images/CAM03278thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">12 декември 2017 г. 18:46 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Бачко и дупльо на леглото във 2рата стая
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03309big.jpg" data-fancybox="images" data-caption="Бачко и дупльо на леглото във 2рата стая">
+      <img src="content/images/CAM03309thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div>
+<div class="s_title"  name="cat04_A">19 декември 2017 г. 20:34 ч.</div>
+<div class="s_title2" name="cat04_B">Категория &quot;Котешки свят&quot;</div>
+<div class="post">
+<div class="s_text" name="cat04_T">
+  Зайко, бачко, пухчо и фенушката на купче - на леглото във 2рата стая
+</div><div class="gallery3" name="cat04">
+   <a class="zoom" href="content/images/CAM03351big.jpg" data-fancybox="images" data-caption="Зайко, бачко, пухчо и фенушката на купче - на леглото във 2рата стая">
+      <img src="content/images/CAM03351thm.jpg" alt="photo">
+   </a>
+</div></div><div class="h_line" name="cat04_L>"></div><table class="arrows">
+<tr>
+<td>
+<div class="gallery5">
+   <a href="javascript:">
+      <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="javascript:">
+      <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="search2.html">
+      <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+<td>
+<div class="gallery5">
+   <a href="search.html">
+      <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+   </a>
+</div>
+</td><td>
+<div class="gallery5">
+   <a href="javascript:window.scrollTo(0, 0)">
+      <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+   </a>
+</div>
+</td>
+</tr>
+</table>
+<div id="Dialog1"><div id="Dialog1Text"></div></div>
+</div>
+ 
+</body>
+</html>

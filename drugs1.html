@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="drugs.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="drugs.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">20 септември 2017 г. 20:40 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="">Списък на гелове за дискова херния.<br>- асам<br>- репарил<br>- дийп рилийф<br>- перскиндол<br>- бен-гей<br>- тендивал<br>- афламил<br>- фастум гел</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 19:00 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30002047/%D0%BC%D0%B5%D0%BB%D0%B1%D0%B5%D0%BA-%D1%84%D0%BE%D1%80%D1%82%D0%B5-%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B8-15-%D0%BC%D0%B3-10">Мелбек Форте таблетки 15 мг. * 10</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 19:07 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30002084/%D0%B0%D1%84%D0%BB%D0%B0%D0%BC%D0%B8%D0%BB-%D1%82%D0%B0%D0%B1%D0%BB-100-%D0%BC%D0%B3-20">Афламил таблетки 100 мг. * 20</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 19:15 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30018516/%D0%BC%D1%83%D1%81%D0%B0%D0%BD%D1%82-%D1%82%D0%B0%D0%B1%D0%BB-2-%D0%BC%D0%B3-30">Мусант табл. 2 мг. * 30</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 19:20 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/13002801/%D0%BC%D0%B8%D0%B4%D0%BE%D0%BA%D0%B0%D0%BB%D0%BC-%D1%84%D0%BE%D1%80%D1%82%D0%B5-%D1%82%D0%B0%D0%B1%D0%BB-150-%D0%BC%D0%B3-30">Мидокалм Форте таблетки 150 мг. * 30</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 22:00 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30033139/%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D1%80%D0%B0%D0%BC%D0%BE%D0%BB-%D1%82%D0%B0%D0%B1%D0%BB-37-5-%D0%BC%D0%B3-325-%D0%BC%D0%B3-10">Паратрамол табл. 37.5 мг. / 325 мг. * 10</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">03 декември 2017 г. 22:03 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/13001608/%D0%BC%D0%B8%D0%BB%D0%B3%D0%B0%D0%BC%D0%BC%D0%B0-%D0%B4%D1%80-20">Милгамма др. * 20</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">04 декември 2017 г. 22:11 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/19001949/%D1%82%D0%B8%D0%BB%D0%BA%D0%BE%D1%82%D0%B8%D0%BB-%D1%82%D0%B0%D0%B1%D0%BB-20-%D0%BC%D0%B3-10">Тилкотил табл. 20 мг. * 10</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">05 декември 2017 г. 22:12 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30041998/%D0%B4%D0%B8%D0%BA%D0%BB%D0%BE%D1%80%D0%B0%D0%BF%D0%B8%D0%B4-%D0%BA%D0%B0%D0%BF%D1%81-75-%D0%BC%D0%B3-50">Диклорапид капс. 75 мг. * 50</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">08 декември 2017 г. 20:15 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/23001124/%D1%86%D0%B8%D0%BB%D0%BE%D0%BA%D1%81%D0%B0%D0%BD-%D0%BA%D0%BE%D0%BB%D0%B8%D1%80-5-%D0%BC%D0%BB-">Цилоксан колир 5 мл</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">08 декември 2017 г. 20:16 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30016240/%D0%B2%D0%B8%D0%B3%D0%B0%D0%BC%D0%BE%D0%BA%D1%81-%D0%BA%D0%BE%D0%BB%D0%B8%D1%80-5-%D0%BC%D0%BB-">Вигамокс колир 5 мл</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">08 декември 2017 г. 20:17 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/18000491/%D1%81%D1%83%D0%BB%D1%84%D0%B0%D1%86%D0%B5%D1%82%D0%B0%D0%BC%D0%B8%D0%B4-%D0%BA%D0%BE%D0%BB%D0%B8%D1%80-10-%D0%BC%D0%BB-">Сулфацетамид колир 10 мл</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">08 декември 2017 г. 20:31 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/05004612/%D0%B4%D0%B8%D0%BA%D0%BB%D0%BE%D1%84%D0%B5%D0%BD%D0%B0%D0%BA-%D1%82%D0%B0%D0%B1%D0%BB-50%D0%BC%D0%B3-30-%D1%87%D0%B0%D0%B9%D0%BA%D0%B0%D1%84%D0%B0%D1%80%D0%BC%D0%B0">Диклофенак табл. 50мг. * 30 Чайкафарма</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">09 декември 2017 г. 20:11 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30008368/%D0%B0%D1%83%D0%BB%D0%B8%D0%BD-%D1%82%D0%B0%D0%B1%D0%BB-100-%D0%BC%D0%B3-9-csc">Аулин табл. 100 мг. * 9 CSC</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">09 декември 2017 г. 20:24 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30002053/%D0%B8%D0%B1%D1%83%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D0%BD-%D1%82%D0%B0%D0%B1%D0%BB-200-%D0%BC%D0%B3-20">Ибупрофен табл. 200 мг. * 20</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">09 декември 2017 г. 20:44 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30034528/%D1%84%D0%B5%D0%BB%D0%BE%D1%80%D0%B0%D0%BD-%D0%B3%D0%B5%D0%BB-5-60-%D0%B3%D1%80-%D0%B0%D0%BA%D1%82%D0%B0%D0%B2%D0%B8%D1%81">Фелоран гел 5 % 60 гр. Актавис</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">10 декември 2017 г. 18:48 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30046421/%D0%B4%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D1%80%D0%B0%D0%BC-%D0%BA%D0%B0%D0%BF%D1%81-75-%D0%BC%D0%B3-20-%D0%BC%D0%B3-30">Диклопрам капс. 75 мг. / 20 мг. * 30</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">10 декември 2017 г. 18:49 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30040633/%D0%B4%D0%B8%D0%BA%D0%BB%D0%BE%D0%BD%D0%B5%D0%B2%D1%80%D0%BE%D0%B2%D0%B8%D1%82-%D0%BA%D0%B0%D0%BF%D1%81-30-%D0%B0%D0%B4%D0%B8%D1%84%D0%B0%D1%80%D0%BC">Диклоневровит капс. * 30 Адифарм</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">10 декември 2017 г. 18:51 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30005073/%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%D0%BA%D1%81-%D1%82%D0%B0%D0%B1%D0%BB-0-5-%D0%BC%D0%B3-100">Ксанакс табл. 0.5 мг. * 100</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <div class="s_title"  name="cat17_A">10 декември 2017 г. 20:37 ч.</div>
+ <div class="s_title2" name="cat17_B">Категория &quot;Лекарства&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat17_T">
+     <a href="https://apteka.framar.bg/30000859/%D0%B1%D0%B8%D1%81%D0%BE%D0%B3%D0%B0%D0%BC%D0%B0-%D1%82%D0%B0%D0%B1%D0%BB-5-%D0%BC%D0%B3-30">Бисогама табл. 5 мг. * 30</a>
+ </div>
+ </div>
+ <div class="h_line" name="cat17_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="drugs.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="drugs.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

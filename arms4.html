@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="arms1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms3.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms5.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 октомври 2016 г. 19:20 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Американският военен кораб „Маунт Уитни“ - флагманът на флотилията на НАТО, акостира в Бургас
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/455837">
+       <img src="content/images/PIC00525.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 октомври 2016 г. 19:22 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Самолет разузнавач на НАТО засне преминаването руската армада покрай Норвегия
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/455847">
+       <img src="content/images/PIC00526.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">21 октомври 2016 г. 20:19 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     US Военни експерти: Хилари издаде най-голямата военна тайна на САЩ по време на дебата с Тръмп
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/455724">
+       <img src="content/images/PIC00527.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">25 октомври 2016 г. 20:32 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Разсекретиха и показаха за първи път руската балистична ракета от 5-то поколение „Сармат”
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/456584">
+       <img src="content/images/PIC00556.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">03 ноември 2016 г. 20:53 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Китай успешно изстреля най-мощната си ракета „Великият поход-5“
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/news/article/459698">
+       <img src="content/images/PIC00569.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">19 ноември 2016 г. 20:18 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     NI състави топ 5 на най-мощните руски въоръжения на бъдещето
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/ni-sstavi-top-5-na-nay-moshchnite-ruski-vorzheniya-na-bdeshcheto_news443854.html">
+       <img src="content/images/PIC00583.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">19 ноември 2016 г. 20:20 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Путин и висши военни взеха решения за производството на най-страшните оръжия на 21 век
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/putin-i-visshi-voenni-vzekha-resheniya-za-proizvodstvoto-na-nay-strashnite-orzhiya-na-21-vek-video_news464318.html">
+       <img src="content/images/PIC00584.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">20 ноември 2016 г. 20:52 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Русия строи свръхмощна РЛС, за да покрие „главното ракетоопасно направление“ от запад
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/rusiya-stroi-svrkhmoshchna-rls-za-da-pokrie-glavnoto-raketoopasno-napravlenie-ot-zapad_news464731.html">
+       <img src="content/images/PIC00589.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">22 ноември 2016 г. 20:19 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     В Русия преминали първите изпитания на ракетите за „ядрения влак” „Баргузин”
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/tekhnologii/v-rusiya-preminali-prvite-izpitaniya-na-raketite-za-yadreniya-vlak-barguzin_news465286.html">
+       <img src="content/images/PIC00593.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">24 ноември 2016 г. 20:30 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Секретна разработка: Ново руско оръжие срещу американския „Рояк“ от бойни дронове
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/sekretna-razrabotka-novo-rusko-orzhie-sreshchu-amerikanskiya-royak-ot-boyni-dronove_news465894.html">
+       <img src="content/images/PIC00598.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">25 ноември 2016 г. 20:36 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Русия пак изуми с „Хармония” - система за глобално следене в световния океан!
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/rusiya-pak-izumi-s-kharmoniya-sistema-za-globalno-sledene-v-svetovniya-okean_news466183.html">
+       <img src="content/images/PIC00600.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">25 ноември 2016 г. 20:41 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Китай изуми света с хиперзвукова ракета за въздушен бой
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/kitay-izumi-sveta-s-khiperzvukova-raketa-za-vzdushen-boy-snimki_news466152.html">
+       <img src="content/images/PIC00601.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">26 ноември 2016 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Русия изстреля успешно междуконтинентална ракета за „ядрен влак“
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/nauka-i-tekhnologii/rusiya-izstrelya-uspeshno-mezhdukontinentalna-raketa-za-yadren-vlak_news466559.html">
+       <img src="content/images/PIC00605.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">02 декември 2016 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     ВВС на САЩ бият тревога заради руските хиперзвукови ракети
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/vvs-na-sashch-biyat-trevoga-zaradi-ruskite-khiperzvukovi-raketi_news468316.html">
+       <img src="content/images/PIC00611.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">04 декември 2016 г. 20:56 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Западът паникьосан: Руско супероръжие блокира противоракетната отбрана на САЩ
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/zapadt-panikosan-rusko-superorzhie-blokira-protivoraketnata-otbrana-na-sashch_news468725.html">
+       <img src="content/images/PIC00616.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">11 декември 2016 г. 20:13 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Уникални КАДРИ: Кораби на НАТО провокират самолетоносача „Адмирал Кузнецов”
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/unikalni-kadri-korabi-na-nato-provokirat-samoletonosacha-admiral-kuznetsov_news470659.html">
+       <img src="content/images/PIC00620.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">11 декември 2016 г. 20:14 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     WFB: Тестът на руската революционна безпилотна подводница с най-мощните ядрени глави вдигна Пентагона под тревога
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/vsyaka-nedelya/video/wfb-testt-na-ruskata-revolyutsionna-bezpilotna-podvodnitsa-s-nay-moshchnite-yadreni-glavi-vdigna-pentagona-pod-trevoga-snimkivideo_news470509.html">
+       <img src="content/images/PIC00621.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">13 декември 2016 г. 20:22 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Топ на 10 най-опасните въоръжения на Русия и НАТО
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/national-interest-razkaza-za-top-na-10-nay-opasnite-vorzheniya-na-rusiya-i-nato_news470770.html">
+       <img src="content/images/PIC00625.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">16 декември 2016 г. 20:29 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     Стратегическият ракетен комплекс „Сармат” ще бъде приет на въоръжение през 2019-2020 г.
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/strategicheskiyat-raketen-kompleks-sarmat-shche-bde-priet-na-vorzhenie-prez-2019-2020-g_news471819.html">
+       <img src="content/images/PIC00636.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <div class="s_title"  name="cat05_A">17 декември 2016 г. 20:27 ч.</div>
+ <div class="s_title2" name="cat05_B">Категория &quot;Оръжия&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat05_T">
+     DefeseNews: ВМС на САЩ планират рекордно разширяване на военния флот
+ </div>
+ <div class="gallery3" name="cat05_1">
+    <a href="http://www.blitz.bg/svyat/defesenews-vms-na-sashch-planirat-rekordno-razshiryavane-na-voenniya-flot_news472263.html">
+       <img src="content/images/PIC00639.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat05_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="arms1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms3.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms5.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="arms.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

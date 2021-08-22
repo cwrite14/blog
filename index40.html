@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index39.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index41.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 20:46 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     STOP на бръчките с маска от мед, банан и кисело мляко!
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/kozmetika/2875--stop-na-brychkite-s-maska-ot-med-banan-i-kiselo-mlqko">
+       <img src="content/images/PIC00240.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 20:48 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Бляскави с уникална празнична маска
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/krasota/3366-blqskavi-s-unikalna-praznichna-maska">
+       <img src="content/images/PIC00241.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 20:51 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Белтък за сияйна кожа, жълтък за жива коса
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/krasota/2665-beltyk-za-siqjna-koja-jyltyk-za-jiva-kosa">
+       <img src="content/images/PIC00242.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 20:57 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Без торбички и тъмни кръгове с прясно мляко
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/krasota/2705-bez-torbichki-i-tymni-krygove-s-prqsno-mlqko">
+       <img src="content/images/PIC00243.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Поставете сода за хляб под очите си и вижте резултата
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/krasota/2085-postavete-soda-za-hlqb-pod-ochite-si-i-vijte-rezultata">
+       <img src="content/images/PIC00244.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:03 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Съвет от козметолог: Пигментните петна изчезват след китайска маска
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/kozmetika/1719-syvet-ot-kozmetolog-pigmentnite-petna-izchezvat-sled-kitajska-maska">
+       <img src="content/images/PIC00245.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:05 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Тайска маска за лице с потресаващ ефект
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/kozmetika/1396-tajska-maska-za-lice-s-potresavasht-efekt-">
+       <img src="content/images/PIC00246.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:07 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Домашни рецепти срещу бръчки
+ </div>
+ <div class="gallery4" name="cat15_1">
+    <a href="http://zdrave.to/kozmetika/897-domashni-recepti-sreshtu-brychki">
+       <img src="content/images/PIC00247.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:09 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Млякото – най-древният козметичен продукт
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/kozmetika/2863-mlqkoto--naj-drevniqt-kozmetichen-produkt">
+       <img src="content/images/PIC00248.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat15_L>"></div>
+ <div class="s_title"  name="cat15_A">16 февруари 2017 г. 21:11 ч.</div>
+ <div class="s_title2" name="cat15_B">Категория &quot;Красота&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat15_T">
+     Хънибуш – неустоимият меден чай
+ </div>
+ <div class="gallery3" name="cat15_1">
+    <a href="http://zdrave.to/bilkolechenie/3504-hynibush--neustoimiqt-meden-chaj">
+       <img src="content/images/PIC00249.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat01_L>"></div>
+ <div class="s_title"  name="cat01_A">16 февруари 2017 г. 21:12 ч.</div>
+ <div class="s_title2" name="cat01_B">Категория &quot;Билки&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat01_T">
+     Розмарин билка за добра памет и концентрация!
+ </div>
+ <div class="gallery3" name="cat01_1">
+    <a href="http://zdrave.to/overview/3487?utm_medium=Facebook&utm_campaign=zdraveto&utm_source=zdraveto">
+       <img src="content/images/PIC00250.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">17 февруари 2017 г. 20:45 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Ранни признаци на сърдечните заболявания
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/overview/3502?utm_medium=Facebook&utm_campaign=zdraveto&utm_source=zdraveto">
+       <img src="content/images/PIC00251.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 20:53 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Ваза с цветя, 1:4, размери: 44 х 55 см, конци: DMC, цена: 85.50 лв, фирма: Вачеви
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=83&product_id=358">
+       <img src="content/images/PIC00252.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 20:58 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Зимен слънчев ден, 1:4, размери: 40 х 35 см, конци: DMC, цена: 51 лв, фирма: Вачеви
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=81&product_id=470">
+       <img src="content/images/PIC00253.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Рози и жасмини, 1:4, размери: 52 х 66 см, конци: DMC, цена: 102 лв, фирма: Вачеви
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=83&product_id=422">
+       <img src="content/images/PIC00254.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:05 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Букет с рози, Реноар, 1:4, размери: 37 х 45 см, конци: DMC, цена: 69.50 лв, фирма: Вачеви
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=83&product_id=357">
+       <img src="content/images/PIC00255.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:11 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Цветя, 1:4, размери: 43 х 34 см, конци: DMC, цена: 80 лв, фирма: Вачеви
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=84&product_id=539">
+       <img src="content/images/PIC00256.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:19 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Божури, 1:4, размери: 40 х 40 см, конци: DMC, цена: 52 лв, фирма: Вачеви
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=84&product_id=508">
+       <img src="content/images/PIC00257.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:24 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Селски рози, 1:4, размери: 40 х 40 см, конци: DMC, цена: 52 лв, фирма: Вачеви (Божури, цена: 45 лв, фирма: Румяна)
+ </div>
+ <div class="gallery3" name="cat14_1">
+    <a href="http://shop.goblenivachevi.com/index.php?route=product/product&path=84&product_id=516">
+       <img src="content/images/PIC00258.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <div class="s_title"  name="cat14_A">17 февруари 2017 г. 21:41 ч.</div>
+ <div class="s_title2" name="cat14_B">Категория &quot;Гоблени&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat14_T">
+     Ваза с лилиум, 1:1, размери: 29 х 38 см, конци: DMC, цена: 56 лв, фирма: Румина
+ </div>
+ <div class="gallery4" name="cat14_1">
+    <a href="http://goblenirumina.com/cvetya/670-vaza-s-lilium">
+       <img src="content/images/PIC00259.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat14_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="index1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index39.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index41.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="index.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+    <meta name="robots" content="noindex, nofollow" />
+ 
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Котешки свят">
+    <meta property="og:title" content="Котешки свят">
+    <meta property="og:image" content="https://blog.rivesta.tk/img.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <meta property="og:description"
+       content="Хроники на живота в котешкия свят.">
+ 
+    <title>Котешки свят</title>
+ 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" type="text/css" media="screen" href="content/themes/style.css" />
+ 
+    <!-- jQuery library -->
+    <script src="content/code/jquery/3.3.1/jquery-3.3.1.min.js"></script>
+ 
+    <!-- jQuery - графичен интерфейс -->
+    <script src="content/code/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="content/code/jquery-ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" media="screen" />
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="content/code/fancybox/3.2.10/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="content/code/fancybox/3.2.10/jquery.fancybox.min.js"></script>
+ 
+    <script src="fancybox3.js"></script>
+ 
+    <!--SCRIPT_1-->
+ 
+ </head>
+ 
+ <body>
+ 
+ <div id="preloader">
+     <div id="status">&nbsp;</div>
+ </div>
+ 
+ <!-- секция за графичния прозорец -->
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+ 
+ <div id="dashboard">
+    <!--
+    <div id="text_1">
+       Настройки<br>
+    </div>
+ 
+    <form id="form_2" action="use_fancybox()">
+      <input type="checkbox" id="checkbox_fancy" value="Bike"
+         onClick="use_fancybox(document.getElementById('checkbox_fancy').checked)">
+         Use Fancybox<br>
+    </form>
+    <script>
+       function use_fancybox(value)
+          {
+            //alert("running " + value);
+            localStorage.setItem('use_fancybox_rq', value ? 1 : 0);
+          }
+    </script>
+    -->
+ </div>
+ 
+ <div id="main">
+   <div id="s_title_main">
+      Котешки свят
+ 
+      <!--
+      <div id="dash">
+         <img src="content/themes/images/menu4.png" onClick="toggle_menu()">
+         <script>
+            function toggle_menu()
+               {
+                 //alert("menu");
+                 var obj = document.getElementById("dashboard");
+                 //alert(obj.style.display);
+                 //if ( obj.style.display == '' || obj.style.display == "none" )
+                 //   { obj.style.display = "block";
+                 //   }
+                 //else
+                 //   { obj.style.display = "none";
+                 //   }
+               }
+         </script>
+      </div>
+      -->
+   </div>
+ 
+ 
+ 
+   <div id="cat_holder_main">
+ 
+      <!--
+      <div id ="main_line_text">
+ 
+         <div id ="catg_holder_text">
+            Категория
+         </div>
+ 
+         <div id ="color_holder_text">
+            Тема
+         </div>
+ 
+      </div>
+      -->
+ 
+      <div id ="main_line">
+         
+         <select id="catg_holder" name="catg_combo" size="1">
+           <option value="cat00">Всичко</option>
+           <!--<optgroup label=""></optgroup>-->
+           <!--<optgroup label="‒‒‒‒‒‒‒‒‒‒‒"></optgroup>-->
+           <!--<optgroup label="" style="background: #DDDDDD"></optgroup>-->
+           <!--<option style="background: #DDDDDD"; disabled>&nbsp;</option>-->
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <option value="cat09">Археология</option>
+           <option value="cat01">Билки</option>
+           <option value="cat16">Времето</option>
+           <option value="cat14">Гоблени</option>
+           <option value="cat12">Древен Египет</option>
+           <option value="cat13">Забележителности</option>
+           <option value="cat06">Здраве</option>
+           <option value="cat11">Климат</option>
+           <option value="cat02">Котета</option>
+           <option value="cat04">Котешки свят</option>
+           <option value="cat15">Красота</option>
+           <option value="cat17">Лекарства</option>
+           <option value="cat18">Любими</option>
+           <option value="cat05">Оръжия</option>
+           <option value="cat07">Разни</option>
+           <option disabled>‒‒‒‒‒‒‒‒‒‒‒‒‒</option>
+           <!--<optgroup label="Възпоминание">-->
+              <option value="cat21">Белушанко</option>
+              <option value="cat22">Мравчо</option>
+              <option value="cat23">Малкият тъжен мишо</option>
+              <option value="cat24">Тъжният мишо</option>
+           <!--</optgroup>-->
+         </select>
+ 
+ 
+ 
+ 
+      <!-- Search Line -->
+      <!--<form id="form_search" action="content/code/cgi-bin/start.pl" method="POST" target="hiddenFrame">-->
+      <form id="form_search" action="content/code/php/search.php" method="POST" target="hiddenFrame">
+         <input id="search_id" type="text" name="search_key" placeholder=""> 
+         <!--<button type="submit"></button>-->
+         <!--<input type="button" value="Търсене" onClick="search(document.getElementById('search_box').value)">-->
+         <input type="hidden" name="category" value="search_rq">
+         <input id="search_btn" type="submit" value="Търсене">
+ 
+         <!--
+         <div id="rtime">
+            20:49
+         </div>
+         -->
+ 
+      </form>
+ 
+      </div>
+ 
+      <script src="content/code/search/search.js"></script>
+ 
+   </div>
+ 
+ 
+   <!--<div class="h_line"></div>-->
+   <!--<div class="h_line2"></div>-->
+ 
+   <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="health1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health6.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight)">
+       <img src="content/themes/images/down_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <script>
+    function do_fav()
+       { //alert("do fav");
+ 
+         var img = jQuery('.favorite img').attr('src');
+         var img_new;
+         //alert(img);
+         var path = 'content/themes/images/';
+         if ( img == path + 'star.png' )
+            { img_new = path + 'star_red.png';
+            }
+         else
+            { img_new = path + 'star.png';
+            }
+         //alert(img_new);
+         jQuery('.favorite img').attr('src', img_new);
+       }
+ </script>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">17 януари 2017 г. 21:40 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учени със сензационно откритие за тялото ни!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/ucheni-ss-senzatsionno-otkritie-za-tyaloto-ni_news480396.html">
+       <img src="content/images/PIC00161.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">17 януари 2017 г. 21:42 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Четирите напитки, които ще почистят кръвта ви и ще филтрират бъбреците ви
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/chetirite-napitki-koito-shche-pochistyat-krvta-vi-i-shche-filtrirat-bbretsite-vi_news480340.html">
+       <img src="content/images/PIC00162.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">17 януари 2017 г. 21:43 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Тайна рецепта на древните египтяни е най-добрият метод за пречистване на тялото от токсини и шлаки, а има и още 9 невероятни ползи
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/tayna-retsepta-na-drevnite-egiptyani-e-nay-dobriyat-metod-za-prechistvane-na-tyaloto-ot-toksini-i-shlaki-a-ima-i-oshche-9-neveroyatni-polzi_news480395.html">
+       <img src="content/images/PIC00163.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">20 януари 2017 г. 20:46 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учени отговориха на въпрос, който притеснява всички ни!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/ucheni-otgovorikha-na-vpros-koyto-pritesnyava-vsichki-ni_news480402.html">
+       <img src="content/images/PIC00164.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">20 януари 2017 г. 20:49 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учени откриха как мозъкът помага на тялото да се бори с бактериите
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/ucheni-otkrikha-kak-mozkt-pomaga-na-tyaloto-da-se-bori-s-bakteriite_news480141.html">
+       <img src="content/images/PIC00165.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">20 януари 2017 г. 20:51 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Меню за студа – повече мляко, риба и ядки
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/menyu-za-studa-poveche-mlyako-riba-i-yadki_news481120.html">
+       <img src="content/images/PIC00166.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">20 януари 2017 г. 20:56 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Кафе, добър сън и водорасли - ключът към младостта
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="https://vesti.bg/tehnologii/nauka-i-tehnika/kafe-dobyr-syn-i-vodorasli-kliuchyt-kym-mladostta-6064403">
+       <img src="content/images/PIC00169.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">26 януари 2017 г. 21:20 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Хирург препоръча упражнения на чичо ми вместо операция на дискова херния! Резултатът е супер само 6 месеца по-късно
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/khirurg-preporcha-uprazhneniya-na-chicho-mi-vmesto-operatsiya-na-diskova-kherniya-rezultatt-e-super-samo-6-mesetsa-po-ksno_news482602.html">
+       <img src="content/images/PIC00175.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 20:48 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Най-важните показатели, които всяка жена трябва да следи, за да няма проблеми със здравето си!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/nay-vazhnite-pokazateli-koito-vsyaka-zhena-tryabva-da-sledi-za-da-nyama-problemi-ss-zdraveto-si_news484036.html">
+       <img src="content/images/PIC00176.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 20:58 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Ако забележите такива образувания по клепачите си трябва да направите едно-единствено нещо
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/ako-zabelezhite-takiva-obrazuvaniya-po-klepachite-si-tryabva-da-napravite-edno-edinstveno-neshcho_news484019.html">
+       <img src="content/images/PIC00177.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 20:59 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Най-чаканият СПИСЪК на храните, които трябва да ядем, за да се предпазим от рак
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/nay-chakaniyat-spisbk-na-khranite-koito-tryabva-da-yadem-za-da-se-predpazim-ot-rak_news483963.html">
+       <img src="content/images/PIC00178.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:01 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Излезе СПИСЪК с най-вредните храни и напитки в България! Вижте кои продукти ни тровят и разболяват най-много
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/izleze-spisbk-s-nay-vrednite-khrani-i-napitki-v-blgariya-vizhte-koi-produkti-ni-trovyat-i-razbolyavat-nay-mnogo_news484040.html">
+       <img src="content/images/PIC00179.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:02 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Преяждането може да доведе до инсулт или инфаркт
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/3375-preqjdaneto-moje-da-dovede-do-insult-ili-infarkt">
+       <img src="content/images/PIC00180.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:03 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     ​7 заблуди за здравословното хранене
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/zdravoslovno-hranene/3358-7-zabludi-za-zdravoslovnoto-hranene">
+       <img src="content/images/PIC00181.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:04 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Медици съставиха списък с най-полезните консерви през зимата
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/obshtestvo/meditsi-sstavikha-spisk-s-nay-poleznite-konservi-prez-zimata_news484089.html">
+       <img src="content/images/PIC00182.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:05 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Диета за дълголетници: Как трябва да се храним, за да бъдем здрави до дълбока старост
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/obshtestvo/dieta-za-dlgoletnitsi-kak-tryabva-da-se-khranim-za-da-bdem-zdravi-do-dlboka-starost_news484070.html">
+       <img src="content/images/PIC00183.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">30 януари 2017 г. 21:06 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Възрастта се определя от състоянието на кръвоносните съдове и костите
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/tqlo/3384-vyzrastta-se-opredelq-ot-systoqnieto-na-kryvonosnite-sydove-i-kostite">
+       <img src="content/images/PIC00184.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">02 февруари 2017 г. 21:14 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Кардиолог от ВМА предупреди: Мозъкът ни спира да работи при влага и мъгла!
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/kardiolog-ot-vma-predupredi-mozkt-ni-spira-da-raboti-pri-vlaga-i-mgla_news484682.html">
+       <img src="content/images/PIC00186.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">02 февруари 2017 г. 21:15 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Учените назоваха неочаквани вредни свойства на два полезни продукта, които употребяваме всеки ден
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://www.blitz.bg/zdrave/uchenite-nazovakha-neochakvani-vredni-svoystva-na-dva-polezni-produkta-koito-upotrebyavame-vseki-den_news484669.html">
+       <img src="content/images/PIC00187.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <div class="s_title"  name="cat06_A">17 февруари 2017 г. 20:45 ч.</div>
+ <div class="s_title2" name="cat06_B">Категория &quot;Здраве&quot;</div>
+ <div class="post">
+ <div class="s_text" name="cat06_T">
+     Ранни признаци на сърдечните заболявания
+ </div>
+ <div class="gallery3" name="cat06_1">
+    <a href="http://zdrave.to/overview/3502?utm_medium=Facebook&utm_campaign=zdraveto&utm_source=zdraveto">
+       <img src="content/images/PIC00251.jpg" alt="photo">
+    </a>
+ </div>
+ </div>
+ <div class="h_line" name="cat06_L>"></div>
+ <table class="arrows">
+ <tr>
+ <td>
+ <div class="gallery5">
+    <a href="health1.html">
+       <img src="content/themes/images/left_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health6.html">
+       <img src="content/themes/images/left_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health.html">
+       <img src="content/themes/images/right_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="health.html">
+       <img src="content/themes/images/right_end2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ <td>
+ <div class="gallery5">
+    <a href="javascript:window.scrollTo(0, 0)">
+       <img src="content/themes/images/up_arrow2tr-64.png" alt="photo">
+    </a>
+ </div>
+ </td>
+ </tr>
+ </table>
+ <div id="Dialog1"><div id="Dialog1Text"></div></div>
+
+ 
+ </div>
+ 
+ <!--
+ <div class="back_top_link">
+    <a href="#slot-main"></a>
+ </div>
+ -->
+ 
+ <script>
+ $(document).ready(function() {
+ //   /* back to top button */
+     
+    $(window).scroll(function() 
+    {
+       if ( $(this).scrollTop() > 400 && 
+            ( $(this).scrollTop() + $(this).height() < $(document).height() - 100) )
+               {
+                 //alert("near bottom!");
+                 $('.back_top_link').fadeIn();
+          } 
+       else 
+          {
+            $('.back_top_link').fadeOut(); 
+         }
+    });
+    $('.back_top_link').click(function() {
+       $("html, body").animate({
+          scrollTop: 0
+       }, 600);
+       return false;
+    });
+     
+    /* back to top button*/
+ });
+ $(window).on('load', function () 
+    {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+ 
+ });
+ </script>
+ 
+ </body>
+ </html>
+
